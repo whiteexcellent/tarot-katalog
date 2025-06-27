@@ -14,6 +14,12 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    /* Mobil cihazda başlığı yukarıya sabitleyelim */
+    position: sticky; /* Yapışkan pozisyon */
+    top: 0; /* Ekranın en üstüne yapışsın */
+    z-index: 1100; /* Diğer tüm elementlerin üzerinde kalmasını sağlar */
+    width: 100%;
 }
 
 .search-container {
@@ -46,15 +52,28 @@ header {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
     padding: 15px;
     transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer; /* Üzerine gelince el işareti çıkar */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /* --- YENİ EKLENEN KURAL --- */
+    /* İçerikten bağımsız olarak tüm kartların en az bu yükseklikte olmasını sağlar. */
+    min-height: 280px; 
 }
 
 .card:hover {
     transform: translateY(-5px); /* Hafifçe yukarı kalkma efekti */
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Mobil cihazda bir karta dokunulduğunda (basılı tutulduğunda) uygulanacak stil */
+.card:active {
+    transform: scale(0.97); /* Kartı hafifçe küçülterek dokunma hissi verir */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Gölgeyi azaltır */
 }
 
 .card img {
@@ -63,59 +82,243 @@ header {
     border-radius: 5px;
 }
 
+/* --- Kart Başlığı Renkleri --- */
+
+/* Aydınlık Tema Kart Başlığı Rengi */
 .card h3 {
-    margin: 10px 0 0;
-    font-size: 1.1em;
+    color: #2c3e50; /* Ana başlık ile aynı koyu mavi tonu */
+}
+
+header h1, .card h3 {
+    font-family: 'Lora', serif; /* Lora fontunu uygula, bulamazsa standart bir serif fontu kullan */
+}
+
+/* Karanlık Tema Kart Başlığı Rengi */
+body.dark-theme .card h3 {
+    color: #a5b4fc; /* Lavanta tonlarında yumuşak ve dikkat çekici bir renk */
 }
 
 /* --- Modal (Detay Penceresi) Stilleri --- */
 .modal {
-    display: none; /* Başlangıçta gizli */
-    position: fixed; /* Sayfa kaysa bile yerinde kalır */
-    z-index: 1000; /* Diğer tüm elemanların üzerinde olmasını sağlar */
+    display: none; /* BAŞLANGIÇTA GİZLİ OLMALI - EN ÖNEMLİ DÜZELTME BU */
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* İçerik sığmazsa kaydırma çubuğu çıkar */
-    background-color: rgba(0,0,0,0.6); /* Yarı saydam siyah arka plan */
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    
+    /* JavaScript ile 'display: flex' yapıldığında ortalamayı sağlayacak olan kurallar */
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: 10% auto; /* Dikeyde ve yatayda ortalamak için */
+    background-color: #2c3e50; /* Resim yüklenene kadar varsayılan arka plan */
+    margin: 20px; /* Her yönden küçük bir boşluk bırakır, ortalamayı Flexbox yapar */
     padding: 30px;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 700px; 
     position: relative;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+    /* --- YENİ EKLENEN STİLLER --- */
+    color: white; /* İçindeki tüm metinleri beyaza çevirir */
+    background-size: cover; /* Arka plan resmini kutuya sığdırır */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
+    /* Metnin resim üzerinde daha okunaklı olması için gölge ekler */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
-.modal-content img {
-    width: 40%;
-    display: block;
-    margin: 0 auto 20px;
-}
-
+/* Modal başlığının rengini de özellikle belirtelim */
 .modal-content h2 {
     text-align: center;
-    color: #2c3e50;
+    color: #fff; /* Başlık rengi beyaz */
+    font-size: 1.6em; /* Kart başlığını daha büyük ve belirgin yapar */
 }
 
-/* --- Kapatma Butonu (X) --- */
+/* Kapatma butonunun rengini de beyaz ve daha görünür yapalım */
 .close-button {
-    color: #aaa;
+    color: #ddd; /* Daha açık bir renk */
     float: right;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Okunabilirlik için gölge */
 }
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: white; /* Üzerine gelince tam beyaz olsun */
     text-decoration: none;
     cursor: pointer;
+}
+
+/* --- Modal İçeriği Kaydırma Stili --- */
+#modalDescription {
+    /* Açıklama alanının maksimum yüksekliğini belirler. 
+       Metin bu yüksekliği aşarsa kaydırma çubuğu çıkar. 
+       200px veya ekran yüksekliğine göre (örn: 30vh) bir değer kullanabilirsiniz. */
+    max-height: 350px; 
+
+    /* Yalnızca dikeyde (y ekseninde) içerik taştığında 
+       otomatik olarak kaydırma çubuğu gösterir. */
+    overflow-y: auto;
+
+    /* Kaydırma çubuğu çıktığında metnin ona yapışmaması 
+       için sağ tarafa küçük bir boşluk ekler. */
+    padding-right: 15px; 
+    
+    /* Metnin genel hizalaması için */
+    text-align: justify;
+    font-size: 1em; /* Açıklama metninin rahat okunmasını sağlar */
+    line-height: 1.6; /* Satır aralığını artırarak okunabilirliği iyileştirir */
+}
+
+/* --- Tema Değiştirme Düğmesi Stili --- */
+#theme-toggle {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: white;
+    color: #2c3e50;
+}
+
+
+/* --- KARANLIK TEMA STİLLERİ --- */
+
+/* body'de .dark-theme sınıfı olduğunda bu stiller uygulanır */
+body.dark-theme {
+    background-color: #121212; /* Koyu gri arka plan */
+    color: #e0e0e0; /* Açık gri metin rengi */
+}
+
+body.dark-theme header {
+    background-color: #1f2937; /* Liderlik alanı için biraz daha açık bir koyu renk */
+}
+
+body.dark-theme .card {
+    background-color: #1e1e1e; /* Kartların arka planı */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Gölgeyi daha belirgin yapalım */
+    border: 1px solid #333;
+}
+
+body.dark-theme #searchInput {
+    background-color: #374151;
+    color: #f4f4f4;
+    border: 1px solid #4b5563;
+}
+
+/* Arama kutusundaki yer tutucu metnin rengini de değiştirelim */
+body.dark-theme #searchInput::placeholder {
+    color: #9ca3af;
+}
+
+/* Modal pencerenin varsayılan arka planını da değiştirelim */
+body.dark-theme .modal-content {
+    background-color: #1e1e1e;
+}
+
+/* Tema değiştirme düğmesinin karanlık moddaki stili */
+body.dark-theme #theme-toggle {
+    border-color: #9ca3af;
+    color: #9ca3af;
+}
+
+body.dark-theme #theme-toggle:hover {
+    background-color: #9ca3af;
+    color: #121212;
+}
+
+/* --- Devamını Oku Butonu Stili --- */
+.read-more-button {
+    background-color: transparent;
+    border: 1px solid #a5b4fc; /* Karanlık moddaki kart başlığı rengiyle uyumlu */
+    color: #a5b4fc;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more-button:hover {
+    background-color: #a5b4fc;
+    color: #1e1e1e;
+}
+
+/* Aydınlık temada butonun renklerini ayarlayalım */
+body:not(.dark-theme) .read-more-button {
+    border-color: #2c3e50;
+    color: #2c3e50;
+}
+
+body:not(.dark-theme) .read-more-button:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* ==========================================================================
+   Mobil Cihazlar İçin Optimizasyon (Responsive Tasarım)
+   ========================================================================== */
+
+/* Ekran genişliği 680px ve daha az olduğunda bu kurallar geçerli olacak */
+@media (max-width: 680px) {
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1100;
+        width: 100%;
+    }
+
+    /* 1. Ana başlığın font boyutunu küçültelim */
+    header h1 {
+        font-size: 1.8em; /* Daha makul bir başlık boyutu */
+    }
+
+    /* 2. Kart ızgarasını tek sütuna düşürelim ve kenar boşluklarını azaltalım */
+    .card-grid-container {
+        grid-template-columns: 1fr; /* Sadece bir sütun olmasını sağlar */
+        padding: 15px;
+    }
+
+    /* 3. Kartların içeriğini ortalayalım ve üstteki boşluğu azaltalım */
+    .card {
+        padding: 10px;
+        min-height: 250px; /* Mobilde de makul bir yükseklik sağlamak için */
+    }
+
+    /* 4. Modal içeriğinin kenar boşluklarını azaltalım */
+    .modal-content {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    /* 5. Kapatma butonunun boyutunu ve konumunu ayarlayalım */
+    .close-button {
+        top: 5px;
+        right: 10px;
+        font-size: 28px;
+    }
+
+    /* 6. Tema değiştirme düğmesinin boyutunu ve konumunu ayarlayalım */
+    #theme-toggle {
+        padding: 6px 12px;
+        font-size: 14px;
+        border-radius: 15px;
+    }
 }
