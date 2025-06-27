@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarot Kart Kataloğu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +16,7 @@
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Kart ara...">
         </div>
+        <button id="theme-toggle">Karanlık Mod</button>
     </header>
 
     <main id="card-grid" class="card-grid-container"></main>
@@ -20,9 +24,14 @@
     <div id="cardModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <img id="modalImage" src="" alt="Tarot Kartı">
             <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
+            
+            <h3 class="meaning-title">Düz Anlamı</h3>
+            <p id="modalUpright"></p>
+            <button id="read-more-btn" class="read-more-button" style="display: none;">Devamını Oku...</button>
+
+            <h3 class="meaning-title">Ters Anlamı</h3>
+            <p id="modalReversed"></p>
         </div>
     </div>
 
