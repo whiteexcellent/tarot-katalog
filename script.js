@@ -5,6 +5,7 @@
 const tarotCards = [
     {
         name: 'Adalet',
+        order: 11,
         image: 'images/adalet.jpg',
         upright: {
             general: "Adalet genel anlamda hukuki işlemler, sözleşmeler, evlilik gibi resmi konular gündeminizdeyse açılımlarınızda belirebilir. Aynı zamanda haksızlığa uğradığınız veya hak yediğiniz, adalet arayışında olunan durumlarda da çekilebilir. Kartın üzerindeki terazi sembolü dengeyi sağlamanız gerektiğini tavsiye eder. İki şey arasında kalmış olabilirsiniz, verilmesi gereken önemli bir karar olduğunu sembolize ediyor olabilir. Bu kararın ciddi ve objektif bir şekilde verilmesi gerekir.\n\nBazen sizi en çok tatmin edecek şey uzun ve meşakkatli yolu tercih etmektir. Karmayı da sembolize edebilen bu büyük arkana kartı geçmişte yaşadığınız haksızlıklar ve travmatize edici olayların şu anda lehinize döndüğünü ve evrenin size hak ettiğiniz güzellikleri vermeye başlıyor olduğunu da gösterebilir. Kısacası hak yerini bulacaktır. Ne ektiyseniz onu biçeceksiniz.",
@@ -21,6 +22,7 @@ const tarotCards = [
     },
     {
         name: 'Asılan Adam',
+        order: 12,
         image: 'images/asilanadam.jpg',
         upright: {
             general: "Asılan adam tarot kartı, memnun olmadığınız bir durumun içerisinde yer aldığınızı temsil eder. Kendinizi tarkdüze bir durumun içerisinde sıkışmış hissedebilir veya zihin çerçevesinde kendinizi kapana kısılmış hissedebilirsiniz. Ancak, kendinizi serbest bırakma gücünüz olduğunu unutmamanız gerekiyor. İçerisinde bulunduğunuz durumdan uzaklaşabilir ve bakış açınızı değiştirebilirsiniz. Bu kart aynı zamanda bir ikilem ile karşı karşıya olduğunuzu da gösterir. Hangi yolu seçeceğinizi bilmiyorsunuzdur. Tarot açılımınızda görünen bu büyük arkana kartı size işlerinizin yolunda gitmediğini gösterebilir. Yapmanız gereken ise olaylara farklı bir bakış açısından bakmak olacaktır. Kendinize rahatlamak için zaman verin ve olayları kontrol etmeye çalışmayı bırakın.",
@@ -36,6 +38,7 @@ const tarotCards = [
     },
     {
         name: 'Aşıklar',
+        order: 6,
         image: 'images/asiklar.jpg',
         upright: {
             general: "Astrolojik değeri ikizler burcu ve jüpiter gezegenini temsil eden aşıklar kartı mükemmel uyumu ve dengeyi sembolize eder. Hava elementi ile de ilişkilidir. Hayatınızda dengeyi elde ettiğinizi söylediği gibi genellikle aşk ilişkilerinizdeki dengeyi ve uyumu da belirtir. Bu kart, iki kişinin duygusal bağlılıklarının var olduğunu ve aşk ilişkilerinde uyumun sağlandığını simgeleyen bir karttır. Ayrıca, bu kart iki kişinin birbirlerine güven ve sevgi duyduklarını da gösterir. Genel açılımlarınızda karşınıza çıktığında hayatınızda yapmanız gereken bazı seçimler olduğunu ve bu konularda kararsızlık yaşadığınızı gösterebilir. Bu kararsızlıklara karşı yeni ortaklıklar yapmak ve fikir almak faydanızadır.",
@@ -51,6 +54,7 @@ const tarotCards = [
     },
     {
         name: 'Ay',
+        order: 18,
         image: 'images/ay.jpg',
         upright: {
             general: "Astrolojik açıdan yengeç burcunu temsil eden su elementi olan ay kartı korkuları, bilinç altında yer edinen endişeleri temsil eder. Zorlu bir dönemden geçiyor olduğunuzu bazı bilmediğiniz şeyler olduğunu sembolize eden bu kart madalyonun öbür yüzünü görmediğiniz hakkında sizi uyarıyor olabilir. Öfke ve bilinmezlik içinizi huzursuz hissettiriyor olabilir. Bu belirsizlik aydınlanma kartı olan güneş kartı ile birlikte ortadan kalkıyor. Kartın bu durumda size tavsiyesi ise önemli kararlar hakkında bir karar vermemek olacaktır. Çünkü, bazı durumlar göründüğünden farklı olabilir ve sizi yanıltabilir. Kafanızdaki bilinmezliklere ve sorulara ısrarla cevap aramayın zira şu anda doğru zaman ve doğru koşullar sağlanmayabilir.",
@@ -66,6 +70,7 @@ const tarotCards = [
     },
     {
         name: 'Aziz',
+        order: 5,
         image: 'images/aziz.jpg',
         upright: {
             general: "Tarotta Aziz kartının elementi topraktır ve Boğa burcunun özelliklerini yansıtır. Eski kafalı, geleneksel, değişime direnen, sabit fikirli, adetlere bağlı ve dinle ilgilenen kişileri temsil eder. Kart üzerindeki çapraz anahtarlar, geleneklere‑alışkanlıklara sıkı sıkıya bağlı olmanın yaşamınızda ilerlemeyi engelleyebileceğini gösterir. Aziz kartı mutluluğa giden yolda eskiyi geride bırakıp yeniyi kucaklamanızı, gerekirse bilgili ve maneviyatı yüksek birine danışmanızı tavsiye eder. Bazen de sorunları çözmek için konuşmak yerine dinlemeyi hatırlatır.",
@@ -83,6 +88,7 @@ const tarotCards = [
     },
     {
         name: 'Azize',
+        order: 2,
         image: 'images/azize.jpg',
         upright: {
             general:"Azize tarot kartı, sağduyu ile bir araya gelmiş sezgi, gizem ve duygusallığı simgeler. Bir tarot açılımında azize kartı belirdiğinde içgüdülerinize güvenmenin ve içgüdüleriniz ile hareket etmenin zamanı gelmiştir. Büyük arkana kartlarından biri olan bu kart, açılımda karşınıza çıktıysa evrenin size gönderdiği işaret ve sembollere dikkat etmenizi önerir. Rüyalarınızda yer alan semboller fark etmeniz gereken bir durumu işaret edebilir. Tarotta azize kartı düz bir şekilde belirdiyse bu kart sezgisel olmayı ve maneviyatı simgeler. Bu nedenle, siz de sorumluluklarınızı yerine getirmek için gereken cesarete sahip olmalı ve sorularınıza cevap bulmak için kalbinizi dinlemelisiniz. Azize aynı zamanda sırları, gizemli olmayı ve çekiciliği de sembolize eder. Kartın arka zemininde bulunan nar sembolizmi doğurganlık, cinsellik ve tutkulu hissetmeyi temsil eder.",
@@ -98,6 +104,7 @@ const tarotCards = [
     },
     {
         name: 'Büyücü',
+        order: 1,
         image: 'images/buyucu.jpg',
         upright: {
             general: "Bir açılımda karşınıza çıkan büyücü tarot kartı, başarılı olmak için ihtiyacınız olan bütün becerilere ve yeteneklere zaten halihazırda sahip olduğunuzu temsil eder. Evren, yolunuzda olumlu değişiklikler getirmek için hizalanmıştır, büyük arkana kartlarından biri olan büyücü kartı bir şeyleri değiştirmek için aklınızı, sezgilerinizi ve iradenizi kullanmanızın gerektiğinin altını çizer. Büyücü kartı, genellikle hayatınızda istediğiniz sonuca ulaşmanın gücüne sahip olduğunuz bir zamanı temsil eder. Bu kartın çıktığı kişiler genellikle altıncı hissi kuvvetli, spritüel konulara yatkın, duru görü yeteneği geliştirilebilir olan kişilerdir, bu sebeple bu kartın çıktığı kişiler spritüel danışmanlık yapabilir ve kuvvetli sezgilerini bu yönde değerlendirebilir.",
@@ -113,6 +120,7 @@ const tarotCards = [
     },
     {
         name: "Değnek Altılısı",
+        order: 106,
         image: "images/değnekaltılısı.jpg",
         upright: {
             general: "Tarotta değnek altılısı kartı, kişinin başarıya ulaşacağı anlamına gelir. kartın üzerindeki gencin elinde defne yaprakları ile süslenmiş bir değnek bulunur. Bu gencin kalabında ise defne çelengi yer alır. Defne çelengi aynı zamanda zaferin simgesidir. Bu kart, kafanızda yer alan sürecin sona erdiğini ve başarı ile sonuçlandığını müjdeler. Kartı çeken kişi, bir ödül ya da çevresindeki kişilerden övgü alabilir. Küçük arkana kartlarından biri olan bu kart, sahip olduğunuz güç ve yeteneklerden faydalandığınızı gösterir. Kalabalık ortamlara girmeyi, kalabalık ortamlarda dikkat çekmeyi, ilgi ve alaka görmeyi temsil edebilir.Pozitif anlamlara sahip olan bu kart, olumsuz anlamlara da işaret edebilir. Başarıya ulaşan kişi, kendisini yeterli görerek bencil davranışlar sergileyebilir.",
@@ -128,6 +136,7 @@ const tarotCards = [
     },
     {
         name: "Değnek Ası",
+        order: 101,
         image: "images/değnekası.jpg",
         upright: {
             general: "Değnek ası kartı, yeni başlangıçları temsil eder. Ateş elementinin sembolü olan değnek figürü, bu başlangıçların tutkularımız ile ilgili olacağını söyler. Aynı zamanda, bu başlayacağınız yeni olayda size yardım edecek bir kişiyi de temsil edebilir. Değnek destek anlamına da gelir. Kartın üzerinde yer alan şato figürü, bu işi başarı ile tamamlayacağınızın motivasyonunu da verir. Yeni bir girişim düşüncesi içindeyseniz, bu kart tutkularınızın peşinden gitmenizi teşvik eder. Kısacası, sizi iyi hissettiren fikirlerin peşinden gidin. Hayata geçireceğiniz projeler için bir işaret arıyorsanız bu kart beklediğiniz işareti veriyor olabilir. Değnek ası kartını ağaca dönüşmemiş bir fidan gibi düşünebilirsiniz. Gelecek için büyük umutlar taşıyan bu fidanın ağaca dönüşebilmesi ise kişiye bağlı. Bu yolda başarılı olmak için yeteri kadar çalışmanız gerekir. Bu kart sadece kişilerin aradığı o ilk kıvılcım gibidir. Gerisi kişinin çabalarına kalır.",
@@ -144,6 +153,7 @@ const tarotCards = [
     },
         {
         name: "Değnek Beşlisi",
+        order: 105,
         image: "images/değnekbeşlisi.jpg",
         upright: {
             general: "Değnek beşlisi kavgaları, tartışmaları, ve anlaşmazlıkları temsil eder. Aynı zamanda mücadele edilmesi gereken bir dönemi, saldırganlığı ve öfkeyi de ifade eder. Bu Küçük Arkana kartı, yaşıtınız veya denginiz olan bir topluluk içerisinde rekabet içerisinde olduğunuz kişiler olduğu anlamına gelebilir. Niyet edilen kişinin ego ve özgüvensizlik problemleri olabilir.Tarot okumanızda ortaya çıktığında iş birliği eksikliği, kontrol eksikliği, önemsiz hissetme, kaos veya asilik bekleyebilirsiniz. Ayrıca ilişkide kaba, savunmacı veya bölgesel olmayı temsil edebilir. Kıskançlık ve aşırı sahiplenme tavırları sergilenebilir.",
@@ -158,6 +168,7 @@ const tarotCards = [
     },
         {
         name: "Değnek Dokuzlusu",
+        order: 109,
         image: "images/değnekdokuzlusu.jpg",
         upright: {
             general: "Yakın zamanda yaşadığınız olaylar enerjinizi tüketmiş, yere yığmasa da yaralamış olabilir. Gücünüzü toparlayıp ilerlemeye devam etmeniz gerekiyor. Yorgun savaşçı olan siz aslında cesaret ve irade sahibisiniz. Dayanma gücünüz kuvvetli. Geçmiş tecrübelerinizden ders alarak önünüze bakmalısınız. İşler planladığınız gibi gitmeyebilir, ancak pes etmeyin.",
@@ -173,6 +184,7 @@ const tarotCards = [
     },
         {
         name: "Değnek Dörtlüsü",
+        order: 104,
         image: "images/değnekdörtlüsü.jpg",
         upright: {
             general: "Tarot değnek dörtlüsü anlamı söz konusu olduğunda kartın üzerinde ellerinde çiçekler ile dans eden mutlu insanlar yer alır. Bu sembolizm kutlamaya işaret eder. Kartın üzerinde yer alan görselde ön planda çiçeklerden bir çelenk bulunmaktadır. Bu çiçekler, kişinin hedeflerine doğru ulaştığını ifade eder. Sevdiğiniz kişiler ile birlikte bir kutlama yapmak için mükemmel bir zamandır. Kartı çeken kişiyi düğün, kavuşma, doğum günü gibi bir kutlama bekler. Eğer yurt dışında yaşıyorsanız, bu kart sevdikleriniz ile bir araya geleceğinizi de gösterebilmektedir. Tarot kartları arasında önemli bir yere sahip olan değnek dörtlüsü, kişinin büyüme ve gelişme konularında yol kat ettiğinin habercisidir. Bunun sonucunda ise kişiyi bir kutlama bekler. Nümeroloji alfabesinde 4 kartı sağlam temelleri simgeler. Kişi, kendisini güvende hissedeceği yeni bir dönemin içerisinde bulur.",
@@ -188,6 +200,7 @@ const tarotCards = [
     },
         {
         name: "Değnek İkilisi",
+        order: 102,
         image: "images/değnekikilisi.jpg",
         upright: {
             general: "Değnek ikilisi kartı üzerinde kırmızı bir cübbe ve şapka giymiş bir adam yer alır. Bu adamın elinde ise küçük bir küre bulunur. Bu küre, dünyanın tam anlamı ile kişinin elinde olduğunu, ufkunu buna göre genişlettiği taktirde önünde muhteşem bir potansiyel olduğudur. Kartın üzerindeki adam, şatosunun sınırları içerisinde durmaktadır. Kişi, önemli fırsatları düşünmektedir ancak bu fırsatları takip etmek için henüz konfor alanını terk etmemiştir. Bir hazırlık yapıyor olduğunu ve geçmişte yaşadığı tecrübeleri kafasında tartarak plan yaptığını söyleyebiliriz. Püf nokta olarak kartın üzerindeki kişinin eli dik bir asa üzerinde duruyor. İkinci asa ise şatonun duvarına yapıştırılmış bir şekilde. Bu da kişinin hala dışarı çıkmaya hazır olmadığına dair bir başka işaret olabilir. Tarot değnek ikilisi kartı, değnek onlusu kartından gelen ilhamın kıvılcımını alır ve onu net bir eylem planına dönüştürür. Keşif aşamasını tamamladınız ve neyi tezahür ettirmek istediğinizin farkındasınız. Seçeneklerinizi keşfediyor ve tüm olasılıkları hesaba katarak önünüzdeki yolu dikkatlice çiziyorsunuz. Yakın çevrenizden uzaklaşmak ve vizyonunuzu genişletmek için denizaşırı seyahat, ileri eğitim ya da önemli bir kariyer değişikliği düşünüyor olabilirsiniz. Dikkatli bir planlama ve ölçülü bir yaklaşım ile kendinizi başarıya hazırlayabileceksiniz.",
@@ -203,6 +216,7 @@ const tarotCards = [
     },
         {
         name: "Değnek Kralı",
+        order: 114,
         image: "images/değnekkralı.jpg",
         upright: {
             general: "Değnek kralı hayatınızı niyet, vizyon ve uzun vadeli bir bakış açısıyla sürdürmeniz gerektiğini hatırlatır. Neyin gerçekleşeceğine dair bir fikriniz var ve bunun gerçekleşeceğini görmek için hiçbir şeyden vazgeçmeyeceksiniz. Ayrıca, vizyonunuzu sonuna kadar görme olgunluğuna da sahipsiniz. Gelecekteki yönünüz ve oraya nasıl varacağınız konusunda netsiniz. Bu nedenle birçok şey başarıyorsunuz. Kartın size tavsiyesi ise hiçbir yere varmayacağına inandığınız olaylar ya da ilişkiler ile zamanınızı boşa harcamamak, sağlam adımlar ile ilerlemeyi seviyorsunuz. Son olarak, kalıcı bir etki bırakmak isteyen bir yapıya sahipsiniz. Değnek kralı kartının ortaya çıkması, aynı zamanda size bir fırsat sunulduğunu ve bu meydan okumayı üstlenecek bir güce sahip olduğunuzu gösterir.",
@@ -217,6 +231,7 @@ const tarotCards = [
     },
         {
         name: "Değnek Kraliçesi",
+        order: 113,
         image: "images/değnekkraliçesi.jpg",
         upright: {
             general: "Değnek kraliçesi iyimser, dışa dönük, yetenekli, hazırcevap ve enerji dolu bir kadındır. İleriye doğru bakması onun hedeflerine ne kadar yakın olduğunu temsil eder. Belli başlı amaçları vardır ve bu doğrultuda yardım almaktan çekinmez. Bu açıdan hedefinize son bir adım kaldığını da gösterir. Olumsuz olarak da çabuk sinirlenen, olay çıkaran ve unutkan bir kişiliği olduğunu söyleyebiliriz.Özellikle bir iş arama döneminde bu kart ile karşılaşmak, bir kadın tarafından yardım alacağınızı gösterebilir. Değnek kraliçesi tarot kartı koç, aslan ve yay gibi ateş burçlarının özelliklerinde 35 yaş ve üstü olan olgun bir kişiliği simgeler. Bu kartı çeken veya niyet edilen kişi bu burçların özelliklerinde olabilir.",
@@ -231,6 +246,7 @@ const tarotCards = [
     },
         {
         name: "Değnek Onlusu",
+        order: 110,
         image: "images/değnekonlusu.jpg",
         upright: {
             general: "Genel anlamda Tarot Değnek Onlusu kartı tükenmişliği, sorumluluklar altında ezilmeyi ve bunalmayı sembolize eder. Kartın üzerinde yer alan adam değnekleri kucaklamış önünü bile göremeden halen ilerlemektedir. İyi bir fikir olarak başlayan bir durum şimdi yük haline gelmiş olabilir. Kendinizi mecbur, yükümlü ve kısıtlanmış hissediyor olabilirsiniz. Odak noktanızı, sonunuza olan pozitif inancınızı kaybettiğinizi de temsil eder. Aslında bu son engeli de atlattığınızda gerisi kolay olacak. Bu kart sorumluluklarınızla tek tek ilgilenerek yükünüzü hafifletmenizi ve olumsuz olmamanızı tavsiye eder.",
@@ -246,6 +262,7 @@ const tarotCards = [
     },
         {
         name: "Değnek Prensi",
+        order: 111,
         image: "images/değnekprensi.jpg",
         upright: {
             general: "Değnek prensi kartı, genç yaşlarda, çocuk veya kalbi genç, neşeli, aktif, iyimser ve enerji dolu bir kişiyi temsil eder. Niyet edilen bu kişinin birçok parlak fikri ve yeni heyecan verici planları vardır. Ateş elementini temsil eden kartta kişi koç, aslan veya yay burcu olabilir. Kartın üzerinde yer alan semboller çeşitli anlamları simgeler. Prensin gömleği, ateş ve dönüşümle ilişkilendirilen efsanevi bir yaratık olan semenderlerle süslenmiştir. Semender, kötüden iyiye dönüşümün simgesidir. Arkasında bıraktıklarına sırtını dönmüş genç yeniliklere hazırdır. Bazı durumlarda küslük, tavır almak, dinlememek, anlamamak gibi anlamlara da gelir.",
@@ -260,6 +277,7 @@ const tarotCards = [
     }, 
     {
         name: "Değnek Sekizlisi",
+        order: 108,
         image: "images/değneksekizlisi.jpg",
         upright: {
             general: "Değnek Sekizlisi tarot kartı aceleciliği, hızı, ilerlemeyi ve hareketi temsil eder. Ani aksiyon, heyecan, heyecan verici zamanlar, seyahat, özgürlük, tatiller ve tatil aşklarının Küçük Arkana kartıdır. Şu anda elinizi neye çevirirseniz, büyük bir hızla havalanacak ve ivme kazanacaktır. Kendinizi pozitif ve enerjik hissedeceksiniz. Ayaklarınız üzerinde düşünecek, sonuçları görecek ve çözümler bulacaksınız. Sıkı çalışmanızın karşılığını alacaksınız ve oyunun önünde olacaksınız. Bu kart aynı zamanda delicesine sevdalanmayı, saplantıyı ve kendini kaptırmayı ya da ayaklarınızın yerden kesilmesini temsil eder.",
@@ -276,6 +294,7 @@ const tarotCards = [
     },
     {
         name: "Değnek Şövalyesi",
+        order: 112,
         image: "images/değnekşövalyesi.jpg",
         upright: {
             general: "Değnek Şövalyesi kartı işlerin beklediğinizden iyi gittiğini gösterir. Üstlendiğiniz bir girişim muhtemelen düşündüğünüzden daha başarılı olabilir. Bu durumda enerji, şevk ve güven dolu olmanız gerekir. Tarot açılımında çıktığı gibi korkusuz ve cesur hissetmelisiniz. Küçük Arkana kartlarından biri olan bu kart, harekete geçmenizi, fikirlerinizi ve planlarınızı harekete geçirmenizi önerir. Başladığınız işlerin bittiğini gösteren bu kart, acele etmemelerinizi ve her şeyin yoluna girmesini beklemenizi tavsiye eder. Değnek Şövalyesi tarot kartı Koç, Aslan ve Yay gibi ateş burçlarının özelliklerinde 20-25 yaşlarında genç-yetişkin bir kişiliği sembolize eder. Bu kartı çeken veya niyet edilen kişi bu burçların özelliklerini de temsil edebilir.",
@@ -290,6 +309,7 @@ const tarotCards = [
     },
     {
         name: "Değnek Üçlüsü",
+        order: 103,
         image: "images/değneküçlüsü.jpg",
         upright: {
             general: "Tarotta Değnek Üçlüsü kartı, planlarınızın artık yolunda ilerlediğini ve mevcut stratejinizi genişletmek, nihai potansiyelinizi en üst seviyeye çıkarmak için plan yapmayı sembolize edebilir. Bu kart, hazırlığınızın sağlam olduğunu ve bu sayede her şeyin istikrarlı bir şekilde beklendiği gibi ilerlediğini temsil eder.Üç değnek, çalışma, seyahat, ticari girişim ve öğrenme yolları ile ufkunuzu genişletmek için size sunulan birçok fırsatı işaret eder. Şu anda, önünüzde olan fırsatların daha çok farkına varmaktasınız. Bu fırsatları değerlendirmek için yolunuza bağlı kalmalı ve umutlarınızın bulunduğunuz çevrenin dışında olduğunu bilmelisiniz. Kısacası, konfor alanınızdan dışarı çıkmaya hazır olmalısınız. Büyük düşünmeye başlayın ve kendinizi keşfetmek ve geliştirmek için neler yapabileceğinizi düşünün. Hazırlık yapmayı bırakın artık ve harekete geçin. Değnek Üçlüsü kartı, sizi sınırlarınızdan daha büyük hayaller kurmaya cesaretlendirir. Vizyonunuzun farkında olun ve başaracağınıza inanın. Bu kart, aynı zamanda önünüzdeki değişikliklere ve zorluklara da dikkat vermenizi önerir. Kartın üzerinde yer alan adamın uzağı izlemesi, yaklaşan gelişmelerin ve engellerin zaten farkında oluşunuzu ve bunlara önceden hazırlanabilecek vaktinizin olduğunun da altını çizer.",
@@ -304,6 +324,7 @@ const tarotCards = [
     },
     {
         name: "Değnek Yedilisi",
+        order: 107,
         image: "images/değnekyedilisi.jpg",
         upright: {
             general: "Değnek Yedilisi tarot kartının üzerinde yer alan figür, inançları için ayağa kalkmış ve değneğiyle sahip olduklarını korumaya çalışır. Meydan okuma, dayanıklılık, kontrol halinde ve saldırı altında olmak gibi anlamlara sahiptir. Hayatında oldukça meşgul ve tedirgin bir dönemde olan kişilere sıklıkla çıkabilir. Günah keçisi ilan edildiğiniz, suçlandığınız, belki de size iftira atılan bir döneme girerek direnmeniz, mücadele etmeniz gereken bir durumu temsil edebilir. Sahip olduklarınızı kaybetmemek adına bir düşmanla savaş halindesiniz.",
@@ -318,6 +339,7 @@ const tarotCards = [
     },
     {
         name: "Denge",
+        order: 14,
         image: "images/denge.jpg",
         upright: {
             general: "Denge kartı anlam olarak içsel sakinliğinizi bulduğunuzu ve çevrenizdeki olaylara karşı olumlu bir bakış açısına sahip olduğunuzu gösterir. Bu kart, hayatınızdaki ilişkilerin uyumlu olduğunun bir işaretidir. Başkalarının çatışmasına sürüklenmemeyi ya da küçük sorunların dengenizi bozmasına izin vermemeyi öğrendiniz. Bunun yerine, açık bir zihin ve sakin bir kalp ile durumlara uyum sağlıyor ve dengenizi koruyorsunuz. Denge tarot anlamı, içinizde kim olduğunuzla, neye değer verdiğinizle, ve kendi ahlaki pusulanızla gerçekten temas halinde olduğunuzu ve özlemlerinizi anlamayı ve kendinize hedefler koymayı daha kolay bulduğunuzu gösterir. Denge kartı aynı zamanda sanatsal ve kültürel aktiviteleri ve yurt dışı, şehir dışı mesafelere seyahat etmeyi temsil edebilir.",
@@ -333,6 +355,7 @@ const tarotCards = [
     },
     {
         name: "Dünya",
+        order: 21,
         image: "images/dünya.jpg",
         upright: {
             general: "Dünya tarot kartı anlamı isminden de anlaşılacağı gibi dünyevi konularda başarıyı, yönetmeyi, gücü elde etmeyi, istenilen noktaya ulaşmayı yani zirveyi temsil eder. Zorluklardan ve sınavlardan başarıyla çıktınız. Şimdi anın tadını çıkarmanın tam zamanı. Başarmanın sevincini ve gururunu yaşayabilirsiniz. Tam anlamıyla tamamlanışı ve mutlu sonu temsil eden kartımız aynı zamanda seyahate çıkmayı da gösterebilir. Çeşitli fırsatların size sunulduğunu ve çok şanslı bir dönemde olduğunuzu gösterebilir. Yeni dünyaları, yeni insanlarla farklı bakış açılarını keşfediyor olabilirsiniz.",
@@ -349,6 +372,7 @@ const tarotCards = [
     },
     {
         name: "Ermiş",
+        order: 9,
         image: "images/ermiş.jpg",
         upright: {
             general: "Ermiş tarot kartı açılımda düz bir şekilde çıktıysa, ruhsal benliğinizi arama ile ilişkilendirilir. Kendinizi daha iyi anlamak için günlük hayatın koşuşturmacasından uzaklaşmak isteyebilirsiniz. Aynı zamanda, \"The Hermit\" kartı yalnızlık anlamına da gelir. İçerisinde bulunduğunuz zor bir durumdan kurtulmak adına kendinizi izole etmeyi seçebilirsiniz. Tarotta büyük arkana kartlarından biri olan bu kart, hayatınızın asosyal bir dönemini de simgeleyebilir. Bu durum kendinize odaklanma ve kendi ihtiyaçlarınızı karşılama zamanı olarak da yorumlanabilir.",
@@ -364,6 +388,7 @@ const tarotCards = [
     },
     {
         name: "Güç",
+        order: 8,
         image: "images/güç.jpg",
         upright: {
             general: "Tarotta Güç kartının elementi ateştir. Aslan burcunun özelliklerini temsil eder. Güneş kartının temsil ettiği kişi empati yeteneği güçlü, bir ortama girdiği zaman dikkatleri ve ilgiyi üzerine çeken, samimi, neşeli, sıcak, merhametli, uzlaşmacı ve pozitiftir. Kartın üzerindeki kadın aslanı tatlı diliyle ehlileştirir. Güç kartı da bu sayede istediğiniz konularda başarılı olmayı, gücü elde edeceğinizi, tartışmaların son bulmasını, barışmaları temsil eder. Düşmanlarınızı yendiniz ve bunu yaparken belki de düşmanlarınıza empati yaparak onları daha iyi anladınız, bu sayede onlarla dost olmuş olabilirsiniz. Uğraştığınız konularda aydınlığa çıkacağınız günler çok yakın. Siz iyi niyetinizi kaybetmeyin yeter.",
@@ -380,6 +405,7 @@ const tarotCards = [
     },
     {
         name: "Güneş",
+        order: 19,
         image: "images/gunes.jpg",
         upright: {
             general: "Güneş kartı bir açılımda çıktığı zaman içiniz rahat edebilir. Mutluluk, sevinç, güç, başarı ve yükselişi simgeler. Kişinin hayatında olumlu değişiklikler olacağını ve yeni başlangıçlar yapacağını gösterir. Güneş kartı ayrıca, kişinin hayatında düzen ve uyum olacağını ve kişinin çalışmalarından başarılı sonuçlar alacağını gösterir. Güneş kartının anlamı, kişinin hayatında pozitif değişimler olacağını ve yeniden doğuş ve yenilenme dönemine girdiğini gösterir. Bana göre tarot destesinin en olumlu kartıdır. Hastalıkların iyileşmesini, hamilelik müjdesini, bereketi ve bolluğu temsil eder. Güneş kartını size uğur getirmesi için yanınızda taşıyabilirsiniz. Kullandığınız defterlerin köşesine çizebilir ve olumsuz hissettiğiniz her an gözünüzde kartı canlandırarak manifest yapabilirsiniz.",
@@ -393,6 +419,7 @@ const tarotCards = [
     },
     {
         name: 'İmparator',
+        order: 4,
         image: 'images/imparator.jpg',
         upright: {
             general: "İmparator kartı istikrar, düzen ve otoriteyi temsil eder. Astrolojide Koç burcu ve Mars gezegeni ile ilişkilidir. Bu kart, hayatınızın kontrolünün sizde olduğunu gösteren güçlü bir karttır. Sorumluluk üstlenmeniz ve lider olmanız için iyi bir zamandır. İmparator ayrıca kendinize güvendiğinizi ve güçlü bir benlik duygusuna sahip olduğunuzu gösterir. Hedeflerinizi gerçekleştirebilirsiniz. İmparator olumlu bir karttır, ancak aynı zamanda zorba veya diktatör olduğunuzu da gösterebilir. Uzlaşmayı ve daha esnek olmayı öğrenmeniz gerekebilir. Eğer çok katı ve esnek değilseniz bu kart olumsuz bir kart da olabilir. Kendinizi bırakmayı ve daha açık fikirli olmayı öğrenmeniz gerekebilir.",
@@ -407,6 +434,7 @@ const tarotCards = [
     },
     {
         name: 'İmparatoriçe',
+        order: 3,
         image: 'images/imparatorice.jpg',
         upright: {
             general: "İmparatoriçe tarot kartı, kadınlık ve anneliğin simgesidir. Aynı zamanda, tarot destesinde yer alan en güçlü hamilelik kartlarındandır. Bir anneyseniz, kendinize gelecek ve hayatınızdan tatmin olacaksınız. Eğer bir babaysanız, tarot İmparatoriçe kartı çocuklarınızla iletişiminizi geliştirmeniz konusunda tavsiyeler veriyor. Ebeveyn olmasanız bile bu kartı gördüğünüzde aldığınız mesaj aynıdır. Daha yumuşak tarafınızı kucaklayın, hissettiğiniz duyguları keşfetmeye izin verin ve sezgilerinizi dinleyin. Çevrenizdeki insanlara sunacağınız empati ve şefkat sayesinde onları kendinize çekebilirsiniz.",
@@ -422,6 +450,7 @@ const tarotCards = [
     },
     {
         name: 'Joker',
+        order: 0,
         image: 'images/joker.jpg',
         upright: {
             general: "Joker kartı, tarotun ilk kartı olması ve bütün destelere yaptığı yolculuğuyla kendisine özel bir yer edinmiştir. Tarot destesine aynı zamanda Kahramanın Yolculuğu adı da verilir. Bilinene göre bu karttaki tecrübesiz genç, kartları sırayla gezerek yolculuğunu bitirir. Bu kart aynı zamanda '0' sayısı ile gösterilir. Sıfır sayısının yuvarlak olması bir döngüyü de sembolize eder. Yeni başlangıçları, yeni maceraları temsil eder. Bu özelliklere ek olarak, saflık, düşüncesizlik gibi özellikler de bu kartın anlamlarındandır. Bir hayalperest kartı olan bu kart, kişinin hayallerini sorgulamasını gerektirir.",
@@ -440,6 +469,7 @@ const tarotCards = [
     },
     {
         name: 'Kader Çarkı',
+        order: 10,
         image: 'images/kader.jpg',
         upright: {
             general: "Kader Çarkı tarot okumalarınızda düz belirdiği zaman iyi veya kötü yaptıklarınızın karşılığını alacağınız, karmanın devreye gireceği kadersel bir süreci temsil eder. Bu sebeple şu dönemde daha hayırlı işleri yapmayı tercih edebilirsiniz. On mislini ilerleyen zamanlarda yaşamanız mümkün. Bu kart çıktığı zaman hayatınızda genellikle pozitif yönde değişiklikler olabilir. Yaşanılacak her şeyin sizin hayrınıza olduğunu bilerek deneyimlemeniz sizi rahatlatacaktır. Evren sizin için bir plan yaptı ve şu anda mutlu sona ulaşmak için ilk adımdasınız. Her ne kadar bu değişiklikler olumlu olsa da sizi konfor alanınızdan çıkaracağı için biraz zorlayabilir. Süreci ve değişimi kabullenmeniz, direnmemeniz iyi olacaktır.",
@@ -456,6 +486,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Altılısı',
+        order: 306,
         image: 'images/kilicaltilisi.jpg',
         upright: {
             general: "Genel anlamda, Kılıç Altılısı düşünce boyutunda bir şeylere bunaldığını ve zorla bir yerden başka bir yere gitmeyi temsil eder. Bu ayrılık tam anlamıyla kendi isteğiniz doğrultusunda olmayabilir. Kaçmak, ayrılmak, mekan değiştirmek, pes etmek anlamlarına gelen bu kart zor bir dönemden geçtiğinizi gösterir. Fırtınadan sonraki sakinliği de sembolize eder. Fırtınadan sonra daha dingin sularda ilerlemek istiyor olabilirsiniz. Bu kart hayata bakış açınızı değiştirdiğinizin de farkındalığını size sağlar. Minör Arkananın bu kartı aynı zamanda Yurtdışı seyahatleri, şehir değiştirme, mesafe ve uzaklık gibi konularda da açılımlarınızda belirir.",
@@ -471,6 +502,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Ası',
+        order: 301,
         image: 'images/kilicasi.jpg',
         upright: {
             general: "Kılıç Ası tarot kartı açılımınızda düz bir şekilde çıktıysa bu kart yeni fikirleri, başlangıçları, yeni proje ve planları temsil eder. Aynı zamanda entelektüel bir kişiyi, zihinsel olarak net olmayı, kararsız olmamayı bu sayede net düşünmeyi ve konsantre olabilme yeteneğini gösterir. Bu küçük arkana kartı aynı zamanda iletişimi de sembolize eder. Kartın üzerinde yer alan taç sembolü de adaleti ve otoriteyi temsil eder. Bunun yanı sıra sizin yararınıza olabilecek yasal konular veya yasal sözleşmelerle ilgili iyi haberleri de simgeleyebilir. Bu kart aklınızdaki fikrin aslında tutacağını bu sebeple sadece plan yapmayı değil eyleme dökmenin gerekliliğine de vurgu yapar.",
@@ -486,6 +518,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Beşlisi',
+        order: 305,
         image: 'images/kilicbeslisi.jpg',
         upright: {
             general: "Kılıç Beşlisi bir tarot okumasında düz şekilde çıktığı zaman bir kazanan ve bir kaybeden olan bir durumu sembolize eder. Kartın üzerindeki genç diğer gençlerin kılıçlarını onların elinden kurnazlıkla almıştır. Hayatınızda manipüle edildiğiniz ve kandırıldığınız bir dönemi veya bir kişiyi temsil edebilen bu kart iletişim eksikliğini de gösterir. Düşmanlık, saldırganlık, zorbalık, saldırı, hırsızlık, aldatma gibi olumsuz anlamları da bu kart sembolize edebilir. Elde etmesi zor bir savaşa girebilirsiniz. Bu zaferi kazanmak zor, bu sebeple bu kart aslında kendinizi hazırlamanız için bir uyarı kartıdır.",
@@ -501,6 +534,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Dokuzlusu',
+        order: 309,
         image: 'images/kilicdokuzlusu.jpg',
         upright: {
             general: "Kılıç Dokuzlusu tarot kartı genel olarak olumsuz düşünceleri, pişmanlık duygusunu ve geceleri uykusuz kalacak kadar düşünceler içerisinde boğulmayı temsil eder. Yaşadığınız olayları olduğundan da kötü bir şekilde görüyor olabilirsiniz. Korku ve endişeleriniz o kadar yüksek ki geceleri kabuslar görüyor ve uykunuzdan sürekli uyanıp yarım yamalak dinleniyorsunuz. Umudunuz tükenmiş ve vicdan azabından kendinize eziyet ediyor olabilirsiniz.",
@@ -515,6 +549,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Dörtlüsü',
+        order: 304,
         image: 'images/kilicdortlusu.jpg',
         upright: {
             general: "Kılıç Dörtlüsü kartı tarot açılımlarında düz bir şekilde çekildiği zaman bunalmış ve zihinsel olarak kendinize aşırı yüklenmiş hissettiğiniz bir dönemi gösterir. Sanki savaştan çıkmış bir askersiniz ve kendinizi dinlenmeye almışsınız. Üçüncü kişileri karttaki görseldeki gibi pencerenin arkasına almışsınız. Çevrenizin manipülelerine veya sizi daha fazla üzmelerine/etkilemelerine izin vermiyorsunuz. Bu kart çıktığı zaman rahatlamak, derin bir nefes alıp biraz kendinize zaman tanıyarak durumunuzu sakin ve mantıklı bir şekilde düşünmeniz gerektiğini size tavsiye eder. Bir tatile ihtiyacınız var. Bir kaç gün bile olsa kendinize huzurlu bir alan yaratmanız faydanıza olacaktır. Aynı zamanda manevi danışmanlık veya destek almanız da bu dönemde size iyi gelebilir.",
@@ -529,22 +564,8 @@ const tarotCards = [
         }
     },
     {
-        name: 'Kılıç İkilisi',
-        image: 'images/kilicikilisi.jpg',
-        upright: {
-            general: "Kılıç İkilisi tarot kartı zarar görmekten çekinmeyi ve çevrenizdekilerle aranıza duvar çektiğinizi gösterebilir. Kendinizi korumaya almış ve duygusal alanınıza girilmesine izin vermiyorsunuz. Aynı zamanda bir tartışmanın veya çatışmanın ortasında kalmayı ve iki kişi arasında arabuluculuk yapmaya çalışıldığını gösterebilir. Bu kart inkarı, körlüğü ve gerçeği görememeyi, isteksiz olmayı temsil eder. Bile isteye yüzünüzü başka tarafa çevirmeyi de gösterebilir. Bazı şeylere tahammülünüz kalmamış.",
-            love: "Eğer bir ilişki içindeyseniz, Kılıç İkilisi aşk anlamı siz ve eşiniz son zamanlarda sık sık tartışıyor ve anlaşamıyor anlamlarına gelebilir. Geçici bir ateşkes ilan etmiş olsanız da karşınızdaki kişiyle aranızda halen soğukluk hakim. Sizi daha fazla üzmesine izin vermeyen bir tavrınız var. Biraz zamana ve alana ihtiyacınız olabilir. Gerçekleri görmezden geldiğiniz için de olayları zamana yayıyor olabilirsiniz. Kılıç İkilisi kartı gerçeklere gözünüzü kapatmamanızı tavsiye eder. Eğer bir ilişki içerisinde değilseniz, Kılıç İkilisi, iki potansiyel partner arasında kaldığınızı gösterebilir ve bu seçim size büyük zorluklar yaşatıyor olabilir. Ayrıca reddedilme korkusu sebebiyle birilerine açılmakta çekiniyor olabilirsiniz. Duygusallığı kapatmış mantıkla hareket ediyor olabilirsiniz. Kendinizi belli bir şekilde davranmaya zorlamayın. Duyguları ve mantığı bir arada tercih etmeye çalışın.",
-            career: "Kariyer Tarot okumasında, Kılıç İkilisi, iş ortamınızda bir çatışma veya fikir ayrılığının ortasında kalabileceğinizi gösterir. Karşıt görüşlere sahip iki meslektaşınız arasında seçim yapmanız gerekebilir. İkisine de sadakatsiz görünmek istemediğiniz, ancak ortada buluşmak istemedikleri için bu arabuluculuk işi sizi zorlayabilir. Bu kart ayrıca iki farklı kariyer yolu veya pozisyonu arasında kaldığınızı da temsil edebilir. İnkar edilen durumlar olduğunu ve gerçeklere gözlerinizi kapadığınızı da yine temsil eder. Bir sonraki adımı atmadan önce doğru ve güvenilir kaynaklardan bilgilenin ve işin artı ve eksilerini mantıken ve manevi olarak beraber değerlendirin. İsteksizliği de temsil eden kartımız olduğunuz yerden kıpırdamama isteğini de gösterir.",
-            money: "Parasal olarak sıkıntı yaşadığınız halde durumu görmezden gelerek günü geçiriyor olabilirsiniz. Kalıcı çözümler aramıyor. Çevrenizle bu konuyu tartışmıyor ve bu durumunuzu düzeltmek adına adım atmakta isteksizsiniz. Kafanızı kuma gömmek sadece sorunlarınızın artmasına yol açar. Yardım almaktan çekinmeyin.",
-            keywords: ["ÇIKMAZA GİRMEK", "ZOR KARARLAR", "KENDİNİ KORUMAK/SAVUNMAK", "KORKULAR İLE YÜZLEŞMEK", "İKİ ŞEY ARASINDA KALMAK", "GERÇEKLERİ GÖREMEMEK"]
-        },
-        reversed: {
-            general: "Ters Kılıç İkilisi kararsızlığı, gecikmeleri ve ertelenen planları temsil edebilir. Korkularınızın, bilinçaltınızdaki endişelerin sizi bunalttığını sembolize eder. Başa çıkabileceğinizden daha fazla bilgiye sahip olduğunuzu gösterir. Aynı zamanda soğuk ve umursamaz bir kişiliği temsil edebilir. Açığa çıkan gerçekler gözlemlenebilir. Belki de bu gerçekleri uzun süredir göremediniz. Şimdi ise her şey ortadadır.",
-            keywords: ["Kararsızlık", "Erteleme", "Gerçeği görme", "Duygusal çalkantı", "Zihinsel çalkantı", "Duygusal soğukluk", "Endişe", "Aşırı temkinli olma"]
-        }
-    },
-    {
         name: 'Kılıç Kralı',
+        order: 314,
         image: 'images/kilickrali.jpg',
         upright: {
             general: "Kılıç Kralı tarot kartı İkizler, Terazi ve Kova gibi hava burçlarının özelliklerinde 35 yaş ve üstü olan olgun, otoriter, genellikle aklıyla hareket eden, entelektüel ve kararlı bireyleri temsil eder. Genel olarak bir konuda istenilen başarıya ve hedefe ulaşmayı temsil eder. Bu hedefe ulaşırken çevrenize karşı fazla sert davranmış ve keskin bir iletişim kurmuş olabilirsiniz. Başarıya ulaşmak adına duygusallığı ikinci plana atmış ve mantıkla hareket etmişsiniz. Duygularınızı herkes varken sergilemekten hoşlanmadığınız için çevreniz sizi biraz soğuk ve mesafeli buluyor olabilir. Görevlerinizi fazla ciddiye alıyor olabilirsiniz ve hayatınızı sorumluluklarınız çevresinde kuruyor olabilirsiniz.",
@@ -560,6 +581,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Kraliçesi',
+        order: 313,
         image: 'images/kilickralicesi.jpg', 
         upright: {
             general: "Kılıç Kraliçesi nitelikleri arasında ilk olarak hava enerjisinde yani Kova, İkizler veya Terazi burcunun özelliklerini taşıyan olgun, özgürlükçü, dürüst, tecrübeli, görüp geçirmiş 40 yaş ve üstü feminen enerjisi yüksek bireyleri temsil etmesi yer alır. Bu özellikteki bir kadın figüründen destek alabilirsiniz veya yardım için bu özelliklerdeki o kişiye gidebilirsiniz. Size açık sözlülükle vereceği sert tavsiyeleri alınmadan dinleyebilirseniz aslında çok bilgece olduğunu siz de anlayacaksınız. Aynı zamanda bu kart geçmiş meselelerden dolayı halen kırgın olduğunuzu temsil edebilir. Oldukça gururlu ve asla muhtaç olmayacak karakteriniz olayları sindirmenizi yavaşlatabilir.",
@@ -576,6 +598,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Onlusu',
+        order: 310,
         image: 'images/kiliconlusu.jpg', 
         upright: {
             general: "Genel olarak, tarot Kılıç Onlusu kartının bir açılımda gözükmesi iyi bir alamet olarak değerlendirilmez. Çünkü, bu kart ihaneti, dedikoduyu ve düşmanları temsil eder. Aynı zamanda bu küçük arkana kartı, başarısızlığı ve yıkımı da sembolize eder. Sinir krizleri, ilişkinin sonunu, şiddeti ve saldırıları da temsil edebilir. Ancak, tam bir kıyamet alameti gibi görünen Kılıçların Onlusu kartında işler göründüğü gibi kötü olmayabilir. Bu durumların birçoğu sadece düşüncesel olarak var olabilir. Takıntılı ve kendi düşüncelerinizde olayları abartıyor olabilirsiniz. Olaylar düşündüğünüz gibi olmayabilir.",
@@ -592,6 +615,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Prensi',
+        order: 311,
         image: 'images/kilicprensi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarotta Kılıç Prensi kartı, geciken haberleri, fikirleri, ilhamı ve meydan okumayı temsil eder. Bu anlamlara ek olarak, koruyucu bir karakteri ya da korunan bir şeyi de temsil edebilir. Küçük Arkana kartlarından biri olan bu kart, sabırlı olmanızı ve konuşmadan önce düşünmeniz gerektiğini öneriyor. Bu kart aynı zamanda adalet, konuşma ve adaletsizlikle mücadele etmeyi de simgeler. Kartın temsil ettiği anlamlar arasında konuşkan olmak, iletişim kurabilmek ve net olma gibi anlamlar yer alır. Bir kişilik olarak ise bu kart genç bir kişiyi, çocuğu ya da mantıklı bir insanı simgeleyebilir. Kartın olumsuz anlamları arasında ise dedikoducu ve düzenbaz olmak gibi özellikler bulunur. Kurallara bağlı olmayı seven kişileri temsil eden bu tarot kartı, Kova, İkizler veya Terazi gibi hava burçlarını temsil eder.",
@@ -611,6 +635,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Sekizlisi',
+        order: 308,
         image: 'images/kilicsekizlisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Genel bir tarot açılımında, Kılıç Sekizlisi anlamı kapana kısılmış, sıkıştırılmış ve gücün elinizden alındığı hissiyatını temsil eder. Aslında güçlü ve genelde nasıl davranmanız gerektiğini bilen bir karakter olsanız da şu an elleriniz kollarınız bağlı gibi hissediyor olabilirsiniz. Korkular, kaygılar ve psikolojik sorunlar bu kartla beraber gündeme gelir. Bu kart kafanıza taktığınız sorunun aslında sizin zihninizde yarattığınız bir durum olduğunu da söyleyebilir. Olumsuz düşünerek kendinize takıntı haline getirmiş olabilirsiniz. Kartın üzerindeki kılıçlar etrafınızı sarıyor olsa da her an göz bağınızı çıkarıp oradan uzaklaşabilirsiniz. İkilem yaşıyor ve hareketsiz kalmaktan dolayı kendinize psikolojik işkence çektiriyor olabilirsiniz. Umutsuzluk, karamsarlık, çaresizlik, kölelik, sansürlenmek ve susturulmak gibi temalar bu kartın temsil ettiği konulardır.",
@@ -626,6 +651,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Şövalyesi',
+        order: 312,
         image: 'images/kilicsovalyesi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kılıç Şövalyesi tarot kartı İkizler, Terazi ve Kova gibi hava elementi burçlarının özelliklerinde olan, tecrübesiz, maceracı 20-35 yaş arası genç yetişkinleri temsil eder. Kartın üzerinde görünen şövalyenin tavrından da anlaşılacağı gibi bu kartı temsil eden kişiler sabırsız, atik, hızlı ve konuşkan, mantıkla hareket eden zeki bireylerdir. Akıntıya karşı durabilen asi ve cesur tavırlarıyla mücadeleden korkmazlar ve geri çekilmezler. Entelektüel kişilikleriyle çevresindeki kişileri ne cevap vermesi gerektiğini iyi bilirler. Bu kart aynı zamanda değişiklik ve ani olaylar kartıdır. Genel açılımlarınızda karşınıza çıktığı zaman olayların beklediğinizden hızlı geliştiğini gözlemleyebilirsiniz. Ani haberlere, fırsatlara veya mücadelelere kendinizi hazırlamanız faydanıza olacaktır.",
@@ -642,6 +668,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Üçlüsü',
+        order: 303,
         image: 'images/kilicuclusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kartın üzerindeki görselden de anlaşılacağı gibi Kılıç Üçlüsü bir kalp kırıklığını, üzüntüyü, mutsuzluğu gösterir. Zor ve sıkıntılı bir dönemden geçiyor olabilirsiniz. Ciddi yanlış anlaşılmalar, üçüncü kişilerden kaynaklı zorluklar ve iletişim sorunları bu kart çıktığında gözlemlenebilir. Bir tür kayıp yaşamış olabilirsiniz veya ihanete uğradınız ve bunun yarası sizde halen taze. Bu kart aynı zamanda hayatınızdaki zorlukları, mücadeleleri, ihanet ve yokluk, fakirliği de gösterebilir. Her ne kadar tarotun olumsuz kartlarından biri olsa da aslında bu kart çevrenizin desteği ile tekrar ayağa kalkabileceğinizi de söyler. Kılıçlar düşüncelerle bağlantılıdır. Bu durumun zihinsel düşünce boyutunda sizi daha çok yorduğunu gösterir. Bilinçaltınızda bir mücadele olduğunu belirtir.",
@@ -657,6 +684,7 @@ const tarotCards = [
     },
     {
         name: 'Kılıç Yedilisi',
+        order: 307,
         image: 'images/kilicyedilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kartın görünüşünden de anlaşılacağı gibi parmak ucunda yürüyen adam sanki bir şeylerden paçayı sıyırmış, dikkat çekmeden başka yöne kaçmaktadır. Aynı zamanda umursamaz tavrı kendine öncelik verdiğini ve keyfine göre hareket ettiğini simgeleyebilir. Elindeki kılıçların hepsi ona ait değildir. Hırsızlık, kurnazlık, aldatmak, hile, gizli saklı arkadan iş çevirme anlamlarına gelebilir. Çevrenizde dost bildiğiniz bir düşman olabilir. Olayları sürekli kendine çeken, manipülatif bir şekilde konuşarak ilgileri toplayan birini gösterebilir. Gözünüzün önünde bir kandırma durumu olabilir. Uyanık ve farkında olmanızda fayda var.",
@@ -672,6 +700,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Altılısı',
+        order: 206,
         image: 'images/kupaaltilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kupa Altılısı kartı düz belirdiği zaman geçmişte yaşadığınız bazı olayları unutamamış olabilirsiniz. Geçmişi şu ana yansıtmanız sebebiyle kopukluklar yaşıyor olabilirsiniz. Bu kart nostaljik hissetmek, çocuksu saf bir enerjiyle hareket etmek, karşınızdaki kişiyi kendiniz gibi iyi niyetli sanmak gibi anlamlara gelir. Sevdiğiniz biriyle hediyeleşmek ve güzel bir teklif almak anlamına da gelebilir. Beklemediğiniz bir anda şımartılabilir ve mutlu edilebilirsiniz. Duygusallığın yoğun olduğu bu minör arkana kartı uzaklardan bir misafirin geleceğinin de haberini veriyor olabilir. Özlemini çektiğiniz biriyle kavuşma yaşanabilir.",
@@ -688,6 +717,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Ası',
+        order: 201,
         image: 'images/kupaasi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kupa Ası anlamı söz konusu olduğunda kartın üzerindeki zambaklar ve tomurcuklar genellikle duygusal anlamda yeni başlangıçları temsil eder. Hayatınıza sunulan yeni fırsatları ve yardım elini sembolize eder. Yine kartın üzerindeki beyaz kuş masum ve samimi duyguları temsil eder. Aynı zamanda barışmak, özgürleşmek, yeni bir seyahate çıkmak anlamlarına da gelebilir. Kibar, içten yeni arkadaşlıkların kurulabileceğini, kendinizi yeni sosyal ortamlarda bulabileceğinizi gösterebilir.",
@@ -703,6 +733,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Beşlisi',
+        order: 205,
         image: 'images/kupabeslisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kupa Beşlisi kartındaki siyah pelerinli adamın boynu bükük önündeki devrilen kupalara bakmaktadır. Arkasındaki ayakta duran kupalara ise sırtı dönüktür. Bu görüntü olayların olumsuz noktalarına odaklanıldığını ve geri döndürülemeyen hatalar yapıldığını düşünmeyi sembolize eder. Aslında halen ayakta kalan kupalar yani duygusal bağlılıklar vardır. Durum düşünüldüğü kadar kurtarılamaz değildir. Ancak kişi pişmanlıklarına, kedere ve endişelerine odaklanmıştır. Yas dönemine çoktan girildiği için bu kart ayrılıkları, boşanmaları, olumsuz sonuçlanan bir işi, fırsatların tepilmesi ve başarısızlıkları temsil edebilir.",
@@ -720,6 +751,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Dokuzlusu',
+        order: 209,
         image: 'images/kupadokuzlusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarotta Kupa Dokuzlusu kartının üzerindeki adam arkasına dizdiği kupalarından gurur duyar bir surat ifadesiyle oturmaktadır. Olduğu yerden ve durumundan memnundur. Bu sebeple bu kartın anlamları arasında şöhret olmak, zenginlik, başarı ve mutluluk vardır. İstediğiniz başarı ve mutluluğu sonunda elde edebileceğinizin kehanetinde bulunur. Çevrenizde sahip olduklarından hava atan, gözü doymuş, artık başaracak bir hedefi kalmamış bir kişi varsa o kişiyi de temsil edebilir. Eğer umutsuz bir anınızda bu kartla göz göze geldiyseniz başarmanıza çok küçük bir adım kaldığının farkına varın ve pozitifliğiniz koruyun. Hayatınızın doruk noktasına ulaşacaksınız.",
@@ -736,6 +768,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Dörtlüsü',
+        order: 204,
         image: 'images/kupadortlusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kupa Dörtlüsü kartı hayatınızda genelde olumsuza ve negatife odaklandığınız durumlarda ortaya çıkar. Motivasyonunuzu ve heyecanınızı kaybetmişsiniz. Gidişattan memnun değilsiniz ama bunu düzeltmek için de çaba harcamıyorsunuz. Çevrenizde olup biten olumlu olaylara, size uzatılan tekliflere ve değer veren insanların çabalarının kıymetini bilmek yerine huysuz bir şekilde kafanızı başka yöne çeviriyorsunuz. Verilen değeri küçümsüyor, fırsatları sizin için avantajlı bulmuyorsunuz. Sahip olduklarınıza şükür etmediğiniz takdirde ilerlemek mümkün olmayacaktır. Kupa Dörtlüsü melankoli ruh haline bürünmemeniz için sizi uyarır. Psikolojik destek alma ihtimalini düşünmenizi de tavsiye eder.",
@@ -752,24 +785,8 @@ const tarotCards = [
         }
     },
     {
-        name: 'Kupa İkilisi',
-        image: 'images/kupa_ikilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
-        upright: {
-            general: "Genel tarot açılımında, Kupa İkilisi tarot kartı çekildiğinde, barışmalar, uzlaşmalar, uyumlu vakit geçireceğiniz kişilerle bir arada olma gibi durumlar gündeminizde olabilir. Romantik ilişkileri temsil edebileceği gibi bu kart aynı zamanda uyumlu arkadaşlıkları ve ortaklığı da sembolize eder. Kartın üzerindeki iki kişi karşılıklı olarak kupaları birbirine uzatmaktadır. Bu görüntü anlaşmaları, duygusal bağı, birbirine karşı saygılı olmayı ifade eder. Aynı zamanda iki kişi kafa kafaya verdiğinde ortaya güzel bir eser çıkabileceğini de gösterir. Kartın üzerinde yer alan aslan figürü de bir ilişkide bir tarafın baskıcı, kontrolcü ve empati sahibi birisi olduğunun habercisi olabilir.",
-            love: "Tarot Kupa İkilisi aşk anlamı olarak ilişki açılımında eğer bir ilişkiniz varsa partnerinizle birbirinize yoğun hislerle bağlı olduğunuzu sembolize eder. Bu kart uyumlu ve dengeli bir ilişkide olduğunuzu söylediği gibi aynı zamanda bir taraftan verilen bir hediyenin veya teklifin kabul edileceğini gösterebilir. Romantizm ve duyguların artacağı günler sizi bekliyor. Evlilik, nişan gibi birliktelik teklifleri yapılabilir. Aynı zamanda geçmişte görüştüğünüz birisiyle bağınız kuvvetleniyor ve tekrar gündeme geliyor da olabilir. Eğer bir ilişkiniz yoksa destekleyici, uyumlu potansiyel bir aday hayatınıza girecek olabilir. Size ilgi duyan birisinden romantik teklifler yağabilir. İçerlediğiniz veya alındığınız potansiyel ruh eşinizle barışma durumu yaşanabilir.",
-            career: "Kariyer açılımında çıkan Kupa İkilisi tarot kartı, beraber dengeli ve uyumlu bir şekilde projelere atılacağınız güvendiğiniz meslektaşınızla ortaklık durumu söz konusudur. Birlikten kuvvet doğar anlamına gelen bu kart hedeflerinize ulaşmak için yardım almaktan çekinmeyin tavsiyesini verir. Bu kart aynı zamanda çalıştığınız kişilerle aranızdaki güven duygusunu gösterir. İş ortamınız huzura kavuşacak ve ortak karar verme süreci daha rahat olacaktır.",
-            money: "Parasal bir tarot açılımında Kupa İkilisi yatırım yapacağınız zaman güvendiğiniz o kişiyle beraber ortak yatırımların size daha fazla kazanç getireceğini söyleyebilir. Dengeli planlamalar yaparak ilerlemek faydanıza olacaktır. Genel anlamda para konuları için olumlu bir karttır. İki kişinin ortaklaşa karlı çıkacağı bir durumu da temsil ediyor olabileceği gibi paranın iki ayrı kişiye bölündüğünü de gösteriyor olabilir.",
-            health: "Sağlık tarot açılımlarında manevi desteği fazlasıyla aldığınızı ve mentalitenizi olumlu yönden beslediğiniz görülür. Dengesiz durumlar yakın zamanda dengelenecek ve normal değerlerinize kavuşacaksınız. Hamilelikte ikiz çocuk müjdesini de verebilir.",
-            keywords: ["ORTAKLIK", "AŞK", "UYUMLULUK", "MUTLU ÇİFTLER", "İLİŞKİ", "DENGE"]
-        },
-        reversed: {
-            general: "Ters Kupa İkilisi tarot kartı aranızın bozulduğu bir arkadaşınız veya partnerinizi temsil ediyor olabilir. Uyumlu ve dengeli olan sağlıklı bir ilişkinin yerini uyumsuz, alma verme dengesinin bozulduğu toksik bir ilişki almış. Duygularınız yerine düşünceler ve takıntılarınızla hareket ediyor olabilirsiniz. Kariyer anlamında da meslektaşlarınızla ilişkinizde güven ve saygının kaybolduğunun uyarısını yapabilir. Yorucu bir iş üstünüze kalabilir. Ortak yaptığınız bir projeyi yalnız bitirmek durumunda kalabilirsiniz. Aynı zamanda zorbalık gibi toksik davranışlara maruz kalıyor olabilirsiniz.",
-            love: "Aşk açılımında Kupa İkilisi kartı ters çıktığı zaman partnerinizle aranızın dengesiz olduğunu gösterir. Partneriniz veya siz bir gün romantik, düşünceli duygusalken öteki gün soğuk, donuk ve saygısız olabilirsiniz. Tartışmalar, anlaşmazlıklar, empati yapılmayan konuşmalar bu kartın ters anlamlarındandır. İlişkide olduğunuz kişiden başka kişilere de gözünüz kayıyor olabilir. Ortak aldığınız kararları çiğniyor ve egonuza yenik düşüyor olabilirsiniz.",
-            keywords: ["Uyumsuzluk", "Dengesizlik", "Mutsuz çiftler", "Ayrılık", "Boşanma"]
-        }
-    },
-    {
         name: 'Kupa Kralı',
+        order: 214,
         image: 'images/kupakrali.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kupa Kralı tarot kartı genel tarot okumalarınızda karşınıza çıktığı zaman oldukça romantik ama duygularını kontrol edebilen, tecrübeli, yaratıcı, sanatsal özellikleri olan, iyi bir dinleyici olan kibar ve sakin 40 yaş ve üstü maskülen bireyleri temsil eder. Bu karakterde olabilirsiniz veya bu karakterden birisi hayatınızda olabilir. Genellikle çevresi tarafından sevilir. Su grubu burçlarının yani Balık, Yengeç ve Akrep'in özelliklerini taşır. Aynı zamanda karşınıza çıkacak olan fırsatları, teklifleri ve güzel davetleri temsil eder. Beklediğiniz haberler olumlu sonuçlanacak. Yüksek yaşta kişiler tarafından desteklenebilirsiniz.",
@@ -786,6 +803,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Kraliçesi',
+        order: 213,
         image: 'images/kupakralicesi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarot Kupa Kraliçesi kartı düz olarak karşınıza çıktığında sezgisel bir mesaj aldığınız anlamına gelir. Bu durumda, kendinize sormanız gereken sorulardan birisi duygusal bir ikilem yaşıyor muyum sorusu olacaktır. Kişiye bir manevi bir güç veren kart, kadınsı bir kişilik ile iletişime geçmenizi ve onun duygusal desteğini aldığınız anlamına gelir. Bu kart maneviyat, sevgi ve sezgisel hisler temsil eder. Kartı temsil eden kişi su burçlarından birisi yani Yengeç, Akrep veya Balık olabilir. Annevari özellikleriyle çevresinde sevdiği kişilere fazla düşkündür ve yardımseverdir. İyi niyetli birisidir ancak karamsar ve depresif olmaya meyillidir.",
@@ -800,6 +818,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Onlusu',
+        order: 210,
         image: 'images/kupaonlusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarot Kupa Onlusu kartı, duygusal bağlılık, mutluluk ve sevinç gibi duyguları temsil eder. Kupa Onlusu kartı çekildiği zaman kişinin duygusal ihtiyaçlarının karşılandığı ve duygusal sağlığının iyi olduğu anlamını çıkarabiliriz. Aynı zamanda insanlarla olan ilişkileriniz sağlıklı ve uyumludur. Bu kart mutlu bir evliliği, mezuniyeti, anlaşmayı, barışmayı, tatmin olmayı ve birlikteliği temsil eder. Aile sembolizmi istikrarı ve konforu sembolize ederken, çimenli tepeler doğurganlığı, nehir ise duygu akışını temsil eder. Gökkuşağı zor zamanların sonunu işaret eder ve her şeyin yoluna gireceğinin İlahi'den bir işaretidir. Pastoral sahne, gerçek duygusal tatmin ve İlahi aşkla bağlantılıdır.",
@@ -815,6 +834,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Prensi',
+        order: 211,
         image: 'images/kupaprensi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kupa Prensi tarot kartı mesaj taşıyıcıdır. Yakın bir zamanda ani gelişmeler ya da oldukça şaşırtıcı sürprizler yaşayabilirsiniz. Karşılaşacağınız bu yeni haberler arasında ise romantik konular ve mutlu haberler yer alıyor. Kısacası, hayatın eğlenceli noktasında yer alıyorsunuz. Keyfinize bakmakta fayda var. Kupa Prensi'nde yer alan bir diğer anlam ise ani karar değişiklikleridir. Örneğin, aniden bir konudan ilham alarak daha önce düşünmediğiniz bir aksiyon alabilirsiniz. Ancak, bu durumu negatif olarak algılamamalısınız. Ortaya çıkacak durum oldukça olumlu ve coşkulu olacak. Tarotta Kupa Prensi, bazı anlarda ise daha önce hiç karşılaşmadığınız bir durumu simgeler. Ancak, içinde bulunduğunuz bu sıra dışı durum için size bir bilgi sunmayacaktır. Bu noktada, içinde bulunduğunuz duruma daha önce alışık olmadığınızı gösterir. Daha önce de belirtildiği gibi, Kupa Prensi aniden ortaya çıkan olayların habercisi.",
@@ -829,6 +849,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Sekizlisi',
+        order: 208,
         image: 'images/kupasekizlisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kartın üzerindeki kırmızı pelerinli adam arkasını dönmüş bastonu elinde farklı mekanlara doğru yol alıyor. Bazı kişilerden veya durumlardan kaçıyor ve uzaklaşmayı tercih ediyor. Ayrılık, vazgeçmek, pes etmek gibi anlamlara gelse de kişi bu ayrılığı aslında isteyerek yapıyor. Zorunluluktan değil. Yeni bir şey için eskiyi bırakıyor. Bu kart genel tarot açılımlarınıza çıktığı zaman kişinin yeni bir maceraya, yeni bir başlangıca hazırlandığı söylenebilir. Kişi kurulan hayallerden vazgeçip kendisini yenilerine hazırlamıştır. Aynı zamanda bu kart seyahate çıkılacağının veya uzak bir yere yapılacak yolculuğun da habercisi olabilir.",
@@ -846,6 +867,7 @@ const tarotCards = [
     },
     {
         name: 'Kupa Üçlüsü',
+        order: 203,
         image: 'images/kupauclusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Kupa Üçlüsü kartı kutlamaları, barışmaları, bir araya gelmeyi, feminen enerjiyi, güzel haberleri temsil eder. Beklediğiniz sonuçlar olumlu şekilde sonuçlanacak ve bunun kutlamasını, partisini yapacaksınız. Düğün ve nişan gibi bir araya gelinen etkinlikler de bu kart belirdiğinde yaşanır. Kartın üzerinde yer alan üç kadının başında zaferi ve bir döngünün tamamlanışını temsil eden çelenk yer alır. Bu da başladığınız bir işte başarıya ve sonuca ulaştığınızı sembolize eder. Dünya kartına benzeyen bu kartın farkı duyguların daha göz önünde olmasıdır. Yakın çevrenizle olan duygusal bağınız tazelenebilir. Başarılı bir girişim, hamilelik, ortaklık gibi konular da bu kartla temsil edilir. Verimli ve şanslı bir döneme girdiniz. Acele etmeden anın tadını çıkarmanız ve şükür etmeniz manevi anlamda sizi iyileştirecektir.",
@@ -862,6 +884,7 @@ const tarotCards = [
     },
     {
         name: 'Mahkeme',
+        order: 20,
         image: 'images/mahkeme.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Mahkeme kartı, çevrenizdeki insanları yargıladığınız anlamına gelir. Bunun dışında, etrafınızda yer alan insanların da diğer kişiler tarafından yargılandığını gösterebilir. Bu kart, pek çok kültürde uyanış kartı olarak bilinir. Kartı çeken kişi, kararlarını doğru bir şekilde değerlendirmelidir. Kartın üzerinde yer alan görselde kadın, erkek ve çocuk figürleri görülmektedir. Bu figürler Cebrail tarafından yargılanmayı bekler. Tarot mahkeme kartı, kişiyi ruhsal bir uyanış konusunda uyarır. Kişinin bilinçaltına dikkat etmesini, gerçekleri görmesini söyler. Bu kart, yaşantınızı değiştirecek bir karar almanızı önerir. Vereceğiniz bu karar, sezgisel ve mantıksal olmalıdır. Tarot açılımlarında bu kartı çeken kişiler genellikle bir dönüm noktasında yer alır. Yapacağınız seçimin hayatınızın ileri dönemlerini etkileyeceğini unutmayın.",
@@ -877,6 +900,7 @@ const tarotCards = [
     },
     {
         name: 'Ölüm',
+        order: 13,
         image: 'images/olum.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarotta Ölüm kartının anlamları arasında geleneksel olarak değişim, dönüşüm ve son yer alır. Hayatınızdaki bir şeyin sona ermekte olduğunu veya yeni bir yolculuğa çıkmak üzere olduğunuzu gösterebilir. Zor bir durumla karşı karşıyaysanız, bu kart bırakma ve devam etme zamanının geldiğini gösterebilir. Ölüm kartı yeni başlangıçları da temsil edebilir. Kendinizi bir rutinin içinde sıkışmış hissediyorsanız, bu kart sizi bir değişiklik yapmaya teşvik edebilir. Ayrıca hayatınıza iyi bir şeyin girmek üzere olduğunu da gösterebilir. Eğer değişime açıksanız, bu kart güçlü bir müttefik olabilir. Bir açılımda bu kart göründüğünde, etrafındaki diğer kartlara dikkat etmek önemlidir. Kartın etrafı olumsuz kartlarla çevriliyse, değişimin zor olacağını gösterebilir. Ancak kartın etrafında olumlu kartlar varsa, bu doğru yolda olduğunuza dair iyi bir işarettir.",
@@ -891,6 +915,7 @@ const tarotCards = [
     },
     {
         name: 'Savaş Arabası',
+        order: 7,
         image: 'images/savasarabasi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Savaş Arabası, kararlılık, odaklanma ve irade gücüyle engellerin üstesinden gelmeyi temsil eder. Kendinizi araba kartıyla motive, hırslı ve kontrollü hissedeceksiniz. Şimdi gerçekten istediğin şeyin peşinden gitme zamanı. Yolunuzda pek çok engel olabilir ama odaklanmaya devam ederseniz, soğukkanlılığınızı korur ve yeteneklerinize güvenirseniz, başarılı olacaksınız! Araba her şeyden önce bir ulaşım aracı olduğu için seyahati de temsil edebilir. Tarot araba kartı, duygusal olarak savunmasız hissettiğinizi gizlemek için savunmacı veya agresif davrandığınızı da gösterebilir. Şu an kendinizi bir savaşın içindeymiş gibi hissedebilirsiniz. Merak etmeyin, odaklanmanızı sürdürürseniz başarılı olursunuz! Araba ayrıca spor veya yarışmalardaki başarının bir göstergesidir. Araba, kalp ve zihin arasındaki dengeyi bulmayı temsil eder. Endişelerinizi bir kenara bırakmak ve odağınızı korumak faydanıza olacaktır.",
@@ -905,6 +930,7 @@ const tarotCards = [
     },
     {
         name: 'Şeytan',
+        order: 15,
         image: 'images/seytan.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Şeytan tarot kartı astrolojide Oğlak burcunu temsil eder. İşkolikliği, paraya olan düşkünlüğü, çok hırslı olmayı ve materyalist bakış açısı haricinde genel açılımlarınızda karşınıza çıktığı zaman çok hırslı, kontrolcü, manipülatif, kaba, sapkın birisini temsil ediyor olabilir. Aynı zamanda kapana kısılmış hissettiğiniz durumlarda, çevreniz tarafından manipüle edildiğiniz veya çevrenizi kendi istekleriniz adına manipüle ettiğiniz zamanlarda belirebilir. Bazı düşünceleriniz sadece saplantı ve takıntıdan ibaret olabilir. Güç elde etmek nihai hedefiniz haline gelmiş olabilir. Bu yolda her şey mübahtır bakış açısıyla ilerlediğiniz için zarar görebilirsiniz. Yedi büyük günahtan birini işliyor olabilirsiniz.",
@@ -921,6 +947,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Kraliçesi',
+        order: 413,
         image: 'images/tılsımkralicesi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Bu kart, gerçekleşmesi gereken bir durumun gerçekleşmesine yardımcı olur. Bunun için ise pozitif dünya enerjisini kullanır. Tıpkı bir kraliçenin sahip olduğu özellikler gibi cömert ve sıcakkanlıdır. Aynı zamanda, başkalarına yardım etmekten keyif duyar. Kişilerin mutlu ve güvenli olmasına önem gösterir. Kişinin korkularını ortadan kaldırmaya yardımcı olur. Mantıklı bir yapınız var. Sözünüze bağlısınız ve güvenilir bir kişiliğe sahipsiniz. Diğer insanların zor anlarında onlara yardım etmekten çekinmiyorsunuz. Kartın üzerinde yer alan çiçekler ve meyveler, bolluk ve bereketi temsil eder. Bahçe içerisinde kadının elinde yer alan tılsım ise maddi zenginliği ifade eder. Aynı zamanda, sağ alt köşede yer alan tavşan ise doğurganlığın sembolüdür.",
@@ -936,6 +963,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Altılısı',
+        order: 406,
         image: 'images/tılsımaltilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tılsım Altılısı kişinin maddi ve manevi konular hakkında kendisine bir öz eleştiri yapmasını önerir. Kartın sembolleri arasında yer alan bilgi ve güç gibi konulara karşı maddiyatın sizin için ne derece önemli olduğunu düşünme vaktidir. Kendinizi bu resmin ne tarafında görüyorsunuz? Suç sizde mi yoksa çevrenizde mi? Sahip olduklarınızın bir anda değişebileceğini unutmayın. Kartın üzerindeki görselde maddi durumu iyi bir kişi yer alır. Bu kişi, bir dilenciye yardımda bulunur. Bu nedenle, bu kartı çeken kişinin maddi konularda belirleyici bir role sahip olduğu düşünülebilir. Aynı zamanda cömertlik, iyilik, yardım gibi anlamlara gelirken bir yandan yüksek mertebe birisinin üstten bakışını, ağzı iyi laf yapmayı ve ikna kabiliyetini de temsil edebilir.",
@@ -952,6 +980,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Ası',
+        order: 401,
         image: 'images/tılsıması.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tılsım Ası sizin için hayırlı olan yeni başlangıçları ve refahı temsil eder. Pozitiflik, ilham ve yeni heyecan verici olayları sembolize eder. İş teklifi almak, yardım almak, para elde etmek, güzel bir yatırım yapmak veya yatırım tavsiyesi almak, ilgi görmek, ilgilenmek, teklifler ve anlaşmaları temsil edebilir. Hayallerinizi gerçeğe dönüştürmeye hazır olduğunuzu ve hedeflerinizi gerçekleştirmek adına bir adım atacağınızı gösteriyor olabilir. Motivesiniz ve karşınıza çıkan meydan okumalara hazırsınız.",
@@ -967,6 +996,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Beşlisi',
+        order: 405,
         image: 'images/tılsımbeslisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tılsım Beşlisi kartı sanki bütün dünyanın size karşı olduğunu ve hiçbir şeyin yolunda gitmediğini hissettiğiniz zamanlarda açılımlarınızda belirir. Kötü şansı, mücadeleleri veya sıkıntıları ifade eder. Evsizlik, işsizlik, yabancılaşmak ve yoksulluğun tümünü bu kartta görebiliriz. Hayatınızda kargaşaya neden olan hastalık, boşanma, ayrılık veya skandallar bu kartın temsil ettiği durumlardır. Çaresizlik hissi kartı sarmıştır. Sorunlarınıza odaklanmak yerine çözümlere odaklanırsanız bu dip durumdan çıkabilirsiniz. İmkansızlıklar içerisinden imkanlarınızı yaratmak ve ilerlemek zorundasınız.",
@@ -997,6 +1027,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Kralı',
+        order: 414,
         image: 'images/tılsımkrali.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tılsım Kralı anlamı genellikle kariyer hayatında istediği yere ulaşmış, 40 yaş ve sonrası toprak elementinin burçları olan Boğa, Oğlak ve Başak burçları özelliklerindeki kişileri temsil eder. Niyet edilen kişiye Tılsım Kralı kartı çıktığında bu kişiye akıllı, pratik, mantığı ön planda, sorumluluk sahibi, hayatta belli bir statüye ulaşmış sıfatlarını takabilirsiniz. Genel anlamda da uzun süredir bir sorunla mücadele içerisindeyseniz bu kart artık çevrenizde zengin gördüğünüz bir kişiden parasal anlamda veya sorun çözme anlamında bir yardım alacağınızın alameti olabilir. Güç elde ediyorsunuz ve mücadele ettiğiniz sorun artık gözünüzde küçülüyor olabilir. Vermeniz gereken bir karar olduğunda bu kart karşınıza çıkıyorsa oldukça güzel bir motivasyon sağlar. İstikrarlı ilerleme ve olumlu düşünme sayesinde önünüzde aşamayacağınız engel yoktur.",
@@ -1012,22 +1043,8 @@ const tarotCards = [
         }
     },
     {
-        name: 'Tılsım Onlusu',
-        image: 'images/tılsımonlusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
-        upright: {
-            general: "Tılsım Onlusu maddi başarının yanı sıra güvenlik ve konforu da bulundurur. Kartta yer alan yaşlı adam, tıpkı kartı çeken kişi gibi geleceğini garantilemiştir. Bu açıdan, kişinin gelecek konusunda bir endişeye sahip olmadığını söyleyebiliriz. Tarot açılımlarında karşınıza çıkan bu kart, kişinin hayatında maddi açıdan yeni bir başlangıcı simgeler. Kişi, finansal konularda daha iyiye gidecektir. Kartın en temel anlamları ise finansal başarı ve zenginliktir. Ancak, bazı kişiler için de işsizliğin artık sona erdiğini maddi açıdan iyi günlerin geleceğini belirtir. Kartı çeken kişi, kesinlikle zengin olacak değildir. Örneğin, yeni mezun olmuş bir kişi de bu kartı çekebilir. Bu noktada, kişinin elde edeceği meslek onu kesinlikle aç bırakmayacak ve maddi açıdan doyuracaktır yorumu yapılabilir.",
-            love: "Tılsım Onlusu aşk konusunda karşınıza çıktıysa, bu ilişkinizin sağlam temellere dayalı olacağını simgeler. Kartın üzerinde yer alan genç, yaşlı insanlar mutlu bir birlikteliği temsil eder. Bir kutlama görünümü veren kartın üzerindeki kişiler, bir evliliğin de habercisi olabilir. Kısacası, aşk hayatınızda yer alan durumların çok daha iyi bir hal alacağını temsil eder. İlişkisi olmayan kişiler içinse bu kart yine olumlu durumlara işaret eder. Örneğin, aşk açısı çekiyorsanız, artık eski partnerinizden doğan aşk acısından kurtulacağınız ve yeni bir döneme gireceğinizin habercisidir.",
-            career: "Tılsım Onlusu kartı kariyer konusunda karşınıza çıktıysa bu oldukça olumlu bir duruma işarettir. Kariyer konusunda zirveye çıkacağınızı söyler. Kartın üzerinde yer alan kişiler, bir ailenin bir araya gelişini sembolize eder. Bu, kariyer açısından yakaladığınız başarıyı kutlama anlamına gelir. Gerçekleşmesi muhtemel durumlar arasında yeni bir şirket kurmak ya da bir şirketten pay almak yer alır. Bir aile işi yapmak veya baba mesleğini devam ettirmek anlamlarına da gelebilir.",
-            health: "Tılsım Onlusu sağlık konusunda karşınıza çıksa bu iyi bir duruma işarettir. Bu kart sağlık konusunda eğer bir probleminiz varsa iyileşeceğinizi temsil eder. Ailenizin veya aileniz gibi gördüğünüz kişilerin size çok destek olacağını temsil edebildiği gibi hastalığınızın kalıtsal veya ailenizde de olduğunu temsil edebilir.",
-            keywords: ["ZENGİNLİK", "AİLE MESLEĞİ", "MİRAS", "GÜVEN HİSSİ", "KEYİFLİ ZAMAN"]
-        },
-        reversed: {
-            general: "Ters Tılsım Onlusu, kişinin karşısına çıkacak ani bir engelin habercisi olabilir. Örneğin, iyi bir maddi durumunuz var ise, ters çıkan bu kart maddi durumunuzun tehlikeye gireceğini temsil eder. Maddi dönemin sonuna gelindiğine işaret eder ve hatta bir iflas ufukta görünebilir. Ters beliren bu kartı çeken kişi, maddi konularda dikkatli olmalıdır. Bu noktada, ilk olarak harcamalarınıza dikkat edin.",
-            keywords: ["Beklenmeyen değişiklikler", "İflas etmek", "Bir devrin sona ermesi", "İllegal işler"]
-        }
-    },
-    {
         name: 'Tılsım Prensi',
+        order: 411,
         image: 'images/tılsımprensi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Saraylılardan Tılsım Prensi deneyimsizdir fakat istikrarlı ve ne istediğini bilen karakteriyle elinde para sembolünü tutmakta ve geleceğe doğru umutla bakmaktadır. Gencin aklında yaptığı planlar, sorumlulukları ve karşılaşacağı sorunlara karşı pratik çözümleri vardır. Tılsım Prensi burç konusunda ise toprak elementini temsil eder. Bu nedenle, Oğlak, Başak ve Boğa burcu toprak elementi grubundaki burçlardır. Yani bu kartı çeken veya niyet edilen kişi bu burçların özelliklerini de temsil ediyor olabilir. Maddi anlamda bir plan yapıyor veya kendinize yeni bir hedef koyuyor olabilirsiniz. Parayla ilgili bir haber bekliyor veya birisinden borç almayı düşünüyor olmak gündeminizde olabilir. Yaptığınız işte veya kariyer hayatınızda daha ilk zamanlarda olduğunuzu ve kendinizde geliştirmeniz gereken özellikler olduğunu sembolize edebilir. Alacak olduğunuz bir kurs, ders gibi bir eğitim için para harcamanız gerektiğini de gösterebilir.",
@@ -1043,6 +1060,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Sekizlisi',
+        order: 408,
         image: 'images/tılsımsekizlisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarot kartları arasında önemli bir konumda yer alan Tılsım Sekizlisi Tarot kartı sıkı çalışma, bağlılık, çalışkanlık ve kendini işinize adadığınız bir dönemde olduğunuzu sembolize eder. Harcadığınız çaba boşa gitmeyecek çünkü sıkı çalışmanız meyvesini verecek. Hedeflerinize ulaşmanızı sağlayacak. Şu anda sıkıcı, sıradan ve hatta acımasız görünebilir, ancak büyük bir başarıya ulaşmanın eşiğindesiniz, bu yüzden pes etmeyin. Şu anda öğrendiğiniz beceriler, hayatınızın ilerleyen dönemlerinde sizin için değerli olacak ve bu deneyimden yalnızca kazandığınız anlık kazancın yanı sıra, hayallerinizi gerçekleştirmenin verdiği gurur ve özgüven duygusuyla kendinizi iyi hissedeceksiniz. Genelden ziyade detaylarla da ilgilenerek işinizi mükemmelleştiriyorsunuz.",
@@ -1058,6 +1076,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Şövalyesi',
+        order: 412,
         image: 'images/tılsımsovalyesi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarot Tılsım Şövalyesi kartı genellikle 20-40 yaş arası, duyguları yerine daha çok mantığını kullanan, tamamen olgun bir kişilik olmasa da prens serisi kadar toy ve hayalci olmayan genç yetişkinleri temsil eder. Boğa, Başak ve Oğlak toprak burçlarını sembolize eder. Siyah atına binmiş şövalye uzaklardan bir haber bekliyor. Bu haberi beklerken biraz karamsar. Negatif bir enerjiyle işlerin istediği şekilde gitmeyeceğini düşünmekte. İçinin kararması belki de fazla çalışkan ve sorumluluk sahibi olmaktan dolayı olabilir. Mükemmeliyetçilik içinizi huzursuz ediyor olabilir. Genel tarot açılımlarında bu kart özgüvenin yüksekliğini ve ne istediğini artık bilmeyi temsil eder. İstedikleriniz için savaşmak adına en doğru zamanı bekliyorsunuz. Aynı zamanda bu minör arkana kartı zorluklar karşısında yılmadan dimdik durduğunuzu gösterir. Yapılan işte artık acemi olmadığınız ve ustalaştığınız anlamlarına da gelir.",
@@ -1074,6 +1093,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Üçlüsü',
+        order: 403,
         image: 'images/tılsımuclusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tılsım Üçlüsü kartının üzerinde yer alan görselde üç kişi ortak bir iş yapmaktadır. Bu üç kişiden birisi lider rolündedir. Bu kartı çeken kişinin liderlik yapması gereken durumlar ortaya çıkabilir. Kart, geriye çekilmektense ön saflarda yer almanızı tavsiye eder. Aynı zamanda, bu kart, kişiye yalnız olmadığını hatırlatır. Çünkü, kartın üzerinde yer alan üç kişi, bu işin bir takım işi olduğu mesajını verir. Ayrıca, üç rakamı yaratıcılığın rakamıdır. Bu nedenle, yaptığınız fikirler diğer kişilerin fikirlerine göre benzersiz ve size özgü olacaktır. Bu kart ekip çalışması, yaratıcılık, yeni bir projenin başlaması gibi anlamlara sahiptir. Kişiye yeni bir sayfa açmak için doğru bir zamanda olduğunun mesajını verir. Aynı zamanda, kendinizi birden fazla kişiye hitap ederken bulabilirsiniz. Kendinizi kanıtlamanız gereken durumlar ile karşılaşmak mümkündür. Kısacası, yeteneklerinizi gösterme zamanıdır.",
@@ -1091,6 +1111,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım Yedilisi',
+        order: 407,
         image: 'images/tılsımyedilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Maddi açıdan başarıyı temsil eden bu kart aynı zamanda da yatırımlarınızın değer kazanması anlamını taşır. Kartı çeken kişi bu konuda da beklemenin kıymetini bilir ve elindeki değer konusunda sabırlı bir tutuma sahiptir. Endişelenmeyin, sabrınızın sonunda sizi hak ettiğiniz ödül beklemektedir. Bir bekleyiş kartı olan Tılsım Yedilisi, hayatınızda verdiğiniz emeklerin sonucunu almanız için size beklemeyi önerir. Kartı gören kişi başarı konusunda aceleci olmamalıdır. Kısacası, bu kart başarıya giden yolda bir dönüm noktası ve küçük bir mola gibidir. Siz ekinlerinizi ektiniz hasat zamanını bekleme zamanı.",
@@ -1106,6 +1127,7 @@ const tarotCards = [
     },
     {
         name: 'Yıkılan Kule',
+        order: 16,
         image: 'images/yikilankule.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tarotta Yıkılan Kule anlamı genellikle olumsuz anlamlara sahiptir. Kaosu temsil eden bu kart, hayatınızda olumsuz ani değişikliklerin olacağının habercisidir. Bu değişim çoğu zaman kaçınılmaz olur. Ancak, iyi taraftan bakarsanız, yıkılan kulenin getirdiği yıkımı her zaman bir yenilenme ve yaratma takip eder. Tarot falı Kule kartı anlamı denildiğinde akla boşanma, kötü bir ayrılık, trajik olaylar ve iş kaybı gibi sarsıcı olaylar gelir. Bu anlamların dışında bu kartın başka bir ülkede yaşama gibi bir anlamı da bulunur. Yanına çekilen kartlarla ani şok, beklenmedik olaylar, kavgalar, ertelenmeler gibi anlamlara da gelebilir.",
@@ -1120,6 +1142,7 @@ const tarotCards = [
     },
     {
         name: 'Yıldız',
+        order: 17,
         image: 'images/yildiz.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Yıldız tarot kartının burcu Kova'dır. Genel okumalarınızda oldukça olumlu anlamlara sahiptir. Tarot destesinin en huzurlu kartı olarak da bilinen Yıldız kartı netliği, uyumu, huzuru, yüklerden kurtulmayı, iletişimi, sakinliği temsil eder. Yaşanılan sorunlar artık geride kaldı. Hayatınızda sizin hayrınıza olmayan şeylere tutunmamayı seçin. Kaderin sizin için güzel planları var. Akışta kalmanız faydanıza olacaktır. Bu kart bırakmanız gereken bazı şeyler olduğunu ve bunları artık bırakmaya hazır olduğunuzu da temsil edebilir. Bu durum yine hayrınızadır. İçinizi ferahlatacak o sürece giriyorsunuz. İyileşme sürecini de temsil eden Majör Arkana kartı kafa dinlemeyi ve sanatsal aktivitelerde bulunmayı da sembolize eder.",
@@ -1134,9 +1157,122 @@ const tarotCards = [
             keywords: ["Umutsuzluk", "Olumsuza odaklanmak", "İnançsızlık", "İlham eksikliği", "Monotonluk"]
         }
     },
+    {
+        name: 'Kılıç İkilisi',
+        order: 302,
+        image: 'images/kilicikilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
+        upright: {
+            general: "Kılıç İkilisi tarot kartı zarar görmekten çekinmeyi ve çevrenizdekilerle aranıza duvar çektiğinizi gösterebilir. Kendinizi korumaya almış ve duygusal alanınıza girilmesine izin vermiyorsunuz. Aynı zamanda bir tartışmanın veya çatışmanın ortasında kalmayı ve iki kişi arasında arabuluculuk yapmaya çalışıldığını gösterebilir. Bu kart inkarı, körlüğü ve gerçeği görememeyi, isteksiz olmayı temsil eder. Bile isteye yüzünüzü başka tarafa çevirmeyi de gösterebilir. Bazı şeylere tahammülünüz kalmamış.",
+            love: "Eğer bir ilişki içindeyseniz, Kılıç İkilisi aşk anlamı siz ve eşiniz son zamanlarda sık sık tartışıyor ve anlaşamıyor anlamlarına gelebilir. Geçici bir ateşkes ilan etmiş olsanız da karşınızdaki kişiyle aranızda halen soğukluk hakim. Sizi daha fazla üzmesine izin vermeyen bir tavrınız var. Biraz zamana ve alana ihtiyacınız olabilir. Gerçekleri görmezden geldiğiniz için de olayları zamana yayıyor olabilirsiniz. Kılıç İkilisi kartı gerçeklere gözünüzü kapatmamanızı tavsiye eder. Eğer bir ilişki içerisinde değilseniz, Kılıç İkilisi, iki potansiyel partner arasında kaldığınızı gösterebilir ve bu seçim size büyük zorluklar yaşatıyor olabilir. Ayrıca reddedilme korkusu sebebiyle birilerine açılmakta çekiniyor olabilirsiniz. Duygusallığı kapatmış mantıkla hareket ediyor olabilirsiniz. Kendinizi belli bir şekilde davranmaya zorlamayın. Duyguları ve mantığı bir arada tercih etmeye çalışın.",
+            career: "Kariyer Tarot okumasında, Kılıç İkilisi, iş ortamınızda bir çatışma veya fikir ayrılığının ortasında kalabileceğinizi gösterir. Karşıt görüşlere sahip iki meslektaşınız arasında seçim yapmanız gerekebilir. İkisine de sadakatsiz görünmek istemediğiniz, ancak ortada buluşmak istemedikleri için bu arabuluculuk işi sizi zorlayabilir. Bu kart ayrıca iki farklı kariyer yolu veya pozisyonu arasında kaldığınızı da temsil edebilir. İnkar edilen durumlar olduğunu ve gerçeklere gözlerinizi kapadığınızı da yine temsil eder. Bir sonraki adımı atmadan önce doğru ve güvenilir kaynaklardan bilgilenin ve işin artı ve eksilerini mantıken ve manevi olarak beraber değerlendirin. İsteksizliği de temsil eden kartımız olduğunuz yerden kıpırdamama isteğini de gösterir.",
+            money: "Parasal olarak sıkıntı yaşadığınız halde durumu görmezden gelerek günü geçiriyor olabilirsiniz. Kalıcı çözümler aramıyor. Çevrenizle bu konuyu tartışmıyor ve bu durumunuzu düzeltmek adına adım atmakta isteksizsiniz. Kafanızı kuma gömmek sadece sorunlarınızın artmasına yol açar. Yardım almaktan çekinmeyin.",
+            keywords: ["ÇIKMAZA GİRMEK", "ZOR KARARLAR", "KENDİNİ KORUMAK/SAVUNMAK", "KORKULAR İLE YÜZLEŞMEK", "İKİ ŞEY ARASINDA KALMAK", "GERÇEKLERİ GÖREMEMEK"]
+        },
+        reversed: {
+            general: "Ters Kılıç İkilisi kararsızlığı, gecikmeleri ve ertelenen planları temsil edebilir. Korkularınızın, bilinçaltınızdaki endişelerin sizi bunalttığını sembolize eder. Başa çıkabileceğinizden daha fazla bilgiye sahip olduğunuzu gösterir. Aynı zamanda soğuk ve umursamaz bir kişiliği temsil edebilir. Açığa çıkan gerçekler gözlemlenebilir. Belki de bu gerçekleri uzun süredir göremediniz. Şimdi ise her şey ortadadır.",
+            keywords: ["Kararsızlık", "Erteleme", "Gerçeği görme", "Duygusal çalkantı", "Zihinsel çalkantı", "Duygusal soğukluk", "Endişe", "Aşırı temkinli olma"]
+        }
+    },
+    {
+        name: 'Kupa İkilisi',
+        order: 202,
+        image: 'images/kupa_ikilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
+        upright: {
+            general: "Genel tarot açılımında, Kupa İkilisi tarot kartı çekildiğinde, barışmalar, uzlaşmalar, uyumlu vakit geçireceğiniz kişilerle bir arada olma gibi durumlar gündeminizde olabilir. Romantik ilişkileri temsil edebileceği gibi bu kart aynı zamanda uyumlu arkadaşlıkları ve ortaklığı da sembolize eder. Kartın üzerindeki iki kişi karşılıklı olarak kupaları birbirine uzatmaktadır. Bu görüntü anlaşmaları, duygusal bağı, birbirine karşı saygılı olmayı ifade eder. Aynı zamanda iki kişi kafa kafaya verdiğinde ortaya güzel bir eser çıkabileceğini de gösterir. Kartın üzerinde yer alan aslan figürü de bir ilişkide bir tarafın baskıcı, kontrolcü ve empati sahibi birisi olduğunun habercisi olabilir.",
+            love: "Tarot Kupa İkilisi aşk anlamı olarak ilişki açılımında eğer bir ilişkiniz varsa partnerinizle birbirinize yoğun hislerle bağlı olduğunuzu sembolize eder. Bu kart uyumlu ve dengeli bir ilişkide olduğunuzu söylediği gibi aynı zamanda bir taraftan verilen bir hediyenin veya teklifin kabul edileceğini gösterebilir. Romantizm ve duyguların artacağı günler sizi bekliyor. Evlilik, nişan gibi birliktelik teklifleri yapılabilir. Aynı zamanda geçmişte görüştüğünüz birisiyle bağınız kuvvetleniyor ve tekrar gündeme geliyor da olabilir. Eğer bir ilişkiniz yoksa destekleyici, uyumlu potansiyel bir aday hayatınıza girecek olabilir. Size ilgi duyan birisinden romantik teklifler yağabilir. İçerlediğiniz veya alındığınız potansiyel ruh eşinizle barışma durumu yaşanabilir.",
+            career: "Kariyer açılımında çıkan Kupa İkilisi tarot kartı, beraber dengeli ve uyumlu bir şekilde projelere atılacağınız güvendiğiniz meslektaşınızla ortaklık durumu söz konusudur. Birlikten kuvvet doğar anlamına gelen bu kart hedeflerinize ulaşmak için yardım almaktan çekinmeyin tavsiyesini verir. Bu kart aynı zamanda çalıştığınız kişilerle aranızdaki güven duygusunu gösterir. İş ortamınız huzura kavuşacak ve ortak karar verme süreci daha rahat olacaktır.",
+            money: "Parasal bir tarot açılımında Kupa İkilisi yatırım yapacağınız zaman güvendiğiniz o kişiyle beraber ortak yatırımların size daha fazla kazanç getireceğini söyleyebilir. Dengeli planlamalar yaparak ilerlemek faydanıza olacaktır. Genel anlamda para konuları için olumlu bir karttır. İki kişinin ortaklaşa karlı çıkacağı bir durumu da temsil ediyor olabileceği gibi paranın iki ayrı kişiye bölündüğünü de gösteriyor olabilir.",
+            health: "Sağlık tarot açılımlarında manevi desteği fazlasıyla aldığınızı ve mentalitenizi olumlu yönden beslediğiniz görülür. Dengesiz durumlar yakın zamanda dengelenecek ve normal değerlerinize kavuşacaksınız. Hamilelikte ikiz çocuk müjdesini de verebilir.",
+            keywords: ["ORTAKLIK", "AŞK", "UYUMLULUK", "MUTLU ÇİFTLER", "İLİŞKİ", "DENGE"]
+        },
+        reversed: {
+            general: "Ters Kupa İkilisi tarot kartı aranızın bozulduğu bir arkadaşınız veya partnerinizi temsil ediyor olabilir. Uyumlu ve dengeli olan sağlıklı bir ilişkinin yerini uyumsuz, alma verme dengesinin bozulduğu toksik bir ilişki almış. Duygularınız yerine düşünceler ve takıntılarınızla hareket ediyor olabilirsiniz. Kariyer anlamında da meslektaşlarınızla ilişkinizde güven ve saygının kaybolduğunun uyarısını yapabilir. Yorucu bir iş üstünüze kalabilir. Ortak yaptığınız bir projeyi yalnız bitirmek durumunda kalabilirsiniz. Aynı zamanda zorbalık gibi toksik davranışlara maruz kalıyor olabilirsiniz.",
+            love: "Aşk açılımında Kupa İkilisi kartı ters çıktığı zaman partnerinizle aranızın dengesiz olduğunu gösterir. Partneriniz veya siz bir gün romantik, düşünceli duygusalken öteki gün soğuk, donuk ve saygısız olabilirsiniz. Tartışmalar, anlaşmazlıklar, empati yapılmayan konuşmalar bu kartın ters anlamlarındandır. İlişkide olduğunuz kişiden başka kişilere de gözünüz kayıyor olabilir. Ortak aldığınız kararları çiğniyor ve egonuza yenik düşüyor olabilirsiniz.",
+            keywords: ["Uyumsuzluk", "Dengesizlik", "Mutsuz çiftler", "Ayrılık", "Boşanma"]
+        }
+    },
+    {
+        name: 'Tılsım Dokuzlusu',
+        order: 409,
+        image: 'images/tılsımdokuzlusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
+        upright: {
+            general: "Tılsım Dokuzlusu düz anlamı olarak oldukça pozitif anlamları temsil eder. Tarotta küçük arkana kartları arasında yer alan bu kart, deneyimlediğiniz başarıyı ve statüyü yaratmak için çok çalıştığınızı ve şimdi bunun tadını çıkarma zamanının geldiğini gösterir. Kendinizi şımartma ve başarılarınızın size getirdiği lüksün ve memnuniyetin tadını çıkarma zamanı. Aynı zamanda güzellik, zarafet ve sofistike olma anlamlarına da gelir. Olgunluk ve bilgelik kazandığınızı da temsil eden Tılsım Dokuzlusu bir kişiyi temsil ediyorsa, genellikle güçlü, kendine güvenen, güzel, sofistike ve bulunduğu yere ulaşmak için çok çalışmış bağımsız bir kadını temsil eder.",
+            love: "İlişki açılımında bu kartı görmek, ilişki içerisinde olan kişiler için hayallerinizin peşinden gitmeniz için özgürlük, bağımsızlık ve destek veren bir partneri temsil edebilir. Aynı zamanda birbirinize olan güveni, huzuru ve güzel iletişimi gösterir. İş hayatındaysanız veya kariyerinizi inşa ediyorsanız, partneriniz size destek ve teşvik sunacaktır. Siz ve eşiniz muhtemelen benzer hedeflere sahipsiniz ve bu hedeflere ulaşmak için beraber çok çalışacaksınız. Ayrıca hamilelik ve doğum da bu kartın sembolleri arasında yer alır. Eğer bir ilişkiniz yoksa bu kart bekar olmanın özgürlüğünden ve bağımsızlığından zevk aldığınızı gösterebilir. Ayrıca bağımsız bir kadınla veya güzel, şık, sofistike, zarif, olgun bir kadınla olan bir ilişkiyi de temsil edebilir. Ya da bu özellikleri kendiniz de sergileyebilirsiniz. Bu kartın temsil ettiği hanımla bir ilişki başlatmak isteyen herkes, onun saygısını veya sevgisini kazanmak için çok çalışmak zorunda kalacak, o bulunduğu yere gelmek için çok çalıştı.",
+            career: "Kariyer açılımında sıkı çalışma ve profesyonellik yoluyla başarı, refah, ödül ve başarıyı gösteren pozitif bir karttır. Kariyerinizde, ulaştığınız statü veya başarı düzeyinin tadını çıkarabileceğiniz bir noktaya ulaşıyorsunuz. İş hayatındaysanız, bu kart, işin geliştiği ve kârın akması gereken bir noktaya ulaştığınızı gösterir. Bulunduğunuz yere gelmek için çok çalıştınız ve şimdi keyfini çıkarmanın zamanı geldi. Olgun insanlar için emekliliği de sembolize eder. Aynı zamanda iyi anlaştığınız güvenilir bir ortaklık kuracağınızın da alameti olabilir.",
+            money: "Bu kart aynı zamanda para dokuzlusu olarak da bilinir. Para açılımında, Tılsım Dokuzlusu bolluğu, finansal bağımsızlığı temsil eder. Yatırım yaptıysanız, yatırımınızı katlayarak tahsil etme zamanı gelmiş olabilir. Ticari girişimlerden karlı çıkıyorsunuz. Zenginliğin getirdiği daha yüksek statünün tadını çıkarabilirsiniz. Aynı zamanda bir mülk aramak veya bir ev veya bir miktar arazi satın almak anlamına da gelebilir.",
+            keywords: ["ZENGİNLİK", "HOŞSOHBET OLMAK", "ŞANS", "BOLLUK/ARTMAK", "EKONOMİK AÇIDAN ÖZGÜR OLMAK", "HUZURLU OLMAK"]
+        },
+        reversed: {
+            general: "Ters Tılsım Dokuzlusu bağımsızlık, özgüven, özgürlük, eksikliğini gösterebilir. Birisinin emek vermeden ödül almaya çalıştığını gösterebilir. Aynı zamanda maddiyatın mutluluğun anahtarı olmadığını hatırlatır. Alternatif olarak, bu kart, hayatın bir alanında diğer alanların zararına olacak kadar çok çalışan birini temsil edebilir. Hedeflerinize odaklanmakta yanlış bir şey yok ama hayatınızın geri kalanının sizi geçmesine izin vermeyin. Bir kişiyi temsil ediyorsa, paraya aç, yüzeysel, düzenbaz ve güven vermeyen olgunluktan yoksun bir kadını temsil edebilir.",
+            keywords: ["Bağımsız olamamak", "Pervasızca harcamak", "Çok çalışmak", "Hırsızlık", "Aldatmak"]
+        }
+    },
+    {
+        name: 'Tılsım Onlusu',
+        order: 410,
+        image: 'images/tılsımonlusu.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
+        upright: {
+            general: "Tılsım Onlusu maddi başarının yanı sıra güvenlik ve konforu da bulundurur. Kartta yer alan yaşlı adam, tıpkı kartı çeken kişi gibi geleceğini garantilemiştir. Bu açıdan, kişinin gelecek konusunda bir endişeye sahip olmadığını söyleyebiliriz. Tarot açılımlarında karşınıza çıkan bu kart, kişinin hayatında maddi açıdan yeni bir başlangıcı simgeler. Kişi, finansal konularda daha iyiye gidecektir. Kartın en temel anlamları ise finansal başarı ve zenginliktir. Ancak, bazı kişiler için de işsizliğin artık sona erdiğini maddi açıdan iyi günlerin geleceğini belirtir. Kartı çeken kişi, kesinlikle zengin olacak değildir. Örneğin, yeni mezun olmuş bir kişi de bu kartı çekebilir. Bu noktada, kişinin elde edeceği meslek onu kesinlikle aç bırakmayacak ve maddi açıdan doyuracaktır yorumu yapılabilir.",
+            love: "Tılsım Onlusu aşk konusunda karşınıza çıktıysa, bu ilişkinizin sağlam temellere dayalı olacağını simgeler. Kartın üzerinde yer alan genç, yaşlı insanlar mutlu bir birlikteliği temsil eder. Bir kutlama görünümü veren kartın üzerindeki kişiler, bir evliliğin de habercisi olabilir. Kısacası, aşk hayatınızda yer alan durumların çok daha iyi bir hal alacağını temsil eder. İlişkisi olmayan kişiler içinse bu kart yine olumlu durumlara işaret eder. Örneğin, aşk açısı çekiyorsanız, artık eski partnerinizden doğan aşk acısından kurtulacağınız ve yeni bir döneme gireceğinizin habercisidir.",
+            career: "Tılsım Onlusu kartı kariyer konusunda karşınıza çıktıysa bu oldukça olumlu bir duruma işarettir. Kariyer konusunda zirveye çıkacağınızı söyler. Kartın üzerinde yer alan kişiler, bir ailenin bir araya gelişini sembolize eder. Bu, kariyer açısından yakaladığınız başarıyı kutlama anlamına gelir. Gerçekleşmesi muhtemel durumlar arasında yeni bir şirket kurmak ya da bir şirketten pay almak yer alır. Bir aile işi yapmak veya baba mesleğini devam ettirmek anlamlarına da gelebilir.",
+            health: "Tılsım Onlusu sağlık konusunda karşınıza çıksa bu iyi bir duruma işarettir. Bu kart sağlık konusunda eğer bir probleminiz varsa iyileşeceğinizi temsil eder. Ailenizin veya aileniz gibi gördüğünüz kişilerin size çok destek olacağını temsil edebildiği gibi hastalığınızın kalıtsal veya ailenizde de olduğunu temsil edebilir.",
+            keywords: ["ZENGİNLİK", "AİLE MESLEĞİ", "MİRAS", "GÜVEN HİSSİ", "KEYİFLİ ZAMAN"]
+        },
+        reversed: {
+            general: "Ters Tılsım Onlusu, kişinin karşısına çıkacak ani bir engelin habercisi olabilir. Örneğin, iyi bir maddi durumunuz var ise, ters çıkan bu kart maddi durumunuzun tehlikeye gireceğini temsil eder. Maddi dönemin sonuna gelindiğine işaret eder ve hatta bir iflas ufukta görünebilir. Ters beliren bu kartı çeken kişi, maddi konularda dikkatli olmalıdır. Bu noktada, ilk olarak harcamalarınıza dikkat edin.",
+            keywords: ["Beklenmeyen değişiklikler", "İflas etmek", "Bir devrin sona ermesi", "İllegal işler"]
+        }
+    },
+    {
+        name: 'Tılsım Dörtlüsü',
+        order: 404,
+        image: 'images/tılsım_dörtlüsü.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
+        upright: {
+            general: "Tılsım Dörtlüsü Tarot kartı, bağlılıklarımızı ve sahiplenmeyi temsil eder. Kartın üzerindeki adam dört elle sahip olduğu para sembolüne sıkı sıkı sarılmıştır. Bu insanlara, mülklere, durumlara veya geçmiş meselelere tutunduğunuzu gösterebilir. Sizi etkileyen ve bırakmanız gereken köklü sorunların olduğunun bir göstergesi olabilir. Size güvenlik hissi veren insanlara veya eşyalara tutunmak için çok uğraşıyor olabilirsiniz. Bir şeylere sağlıksız, sahiplenici, kontrol edici veya toksik bir şekilde tutunuyor olabilirsiniz veya birisi sizi bu şekilde tutuyor olabilir. Kendi sınırlarınızı oluşturmalı ve diğer insanların sınırlarına saygı duymalısınız. Zenginlik, açgözlülük, materyalizmi de bu kartla sembolize edilebilir.",
+            love: "Tılsım Dörtlüsü aşk anlamı olarak eğer bir ilişkiniz varsa, sizin veya eşinizin sahiplenici, kıskanç veya kontrol edici bir şekilde davrandığını gösterebilir. Bu da ilişkiniz üzerinde olumsuz bir etkiye sahip olabilir. Aynı zamanda, birinizin geçmiş konulara veya kinlere tutunduğunu temsil edebilir. İlişkide sorunlara neden olan köklü sorunlar mevcuttur. Eşiniz size bir şekilde haksızlık ettiyse, affetmek ya da ilişkiyi bırakmak için bir karar vermeniz gerekecektir. Bu kart kaybetme korkusunu da temsil eder. Partneriniz sizi kaybetmekten fazlasıyla korktuğu için toksik davranışlarda bulunuyor olabilir.Eğer ilişkiniz yoksa Tılsım Dörtlüsü kendinizi yeni biriyle tanışmaktan alıkoyuyor olabileceğinizi gösterir. Bunun nedeni, değişimden korkmanız, yeni ilişkilere açık fikirli yaklaşmamanız olabilir. Eski sevgilinize karşı hala hisleriniz olabilir. Bu sebeple devam etmeye hazır olmayabilirsiniz. Yeni bir ilişkiyi tamamen benimsemeden önce geçmişten kalan travmaları ve yaşanmışlıkların üzerinizdeki etkisini aşmanız gerekebilir.",
+            career: "Tılsım Dörtlüsü kariyerinizde istikrarlı bir konumda olduğunuzu gösterir. Pozisyonunuzu kaybetme korkusunun hayatınızı yönetmesine izin vermeyin, paranoyaklaşmadan veya kendinizi izole etmeden pozisyonunuzu korumaya dikkat edebilirsiniz. İş yerinizi veya pozisyonunuzu başkalarıyla paylaşmak istemediğiniz durumlarda bu kartı görebilirsiniz. Sizden daha çok kazanacaklar diye veya müşterilerinizi, iş arkadaşlarınızı çalacaklar yerinize geçecekler diye iş arkadaşlarınızla fikir paylaşmak istememe durumu olabilir. Alternatif olarak, Tılsım Dörtlüsü, bir terfi veya maaş artışını engelleyen bir işvereni veya sizden bir şey alıkoyan birini temsil edebilir.",
+            keywords: ["BENCİLLİK","KENDİNE SAKLAMAK","KORUMAK","CİMRİ OLMAK","PAYLAŞMAMAK","KAYBETME KORKUSU"]
+        },
+        reversed: {
+            general: "Ters Tılsım Dörtlüsü, bağımlı kaldığınız insanları, malları, durumları veya geçmiş sorunları bırakmaya hazır olduğunuzu gösterebilir. Artık sizin için sağlıklı olmayan toksik insanları veya durumları serbest bırakıyorsunuz. Ayrıca kendinizi cömert hissediyor ve servetinizi veya sahip olduklarınızı başkalarına veriyorsunuz. İçinizden paylaşmak geliyor. Bu açıdan aşırıya kaçmamaya ve başkalarının sizden faydalanmasına izin vermemeye dikkat edin. Bununla birlikte, insanları veya durumları kontrol etmeyi bıraktığınızı ve olaylara daha rahat ve açık bir tavırla yaklaştığınızı da gösterebilir.",
+            keywords: ["Boşvermişlik","Cömertlik","Finansal güvensizlik","Kumar bağımlılığı"]
+        }
+    },
+    {
+        name: 'Kupa Yedilisi',
+        order: 207,
+        image: 'images/kupa_yedilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
+        upright: {
+            general: "Genel olarak, hayalleri ve düşünceleri temsil eden Kupa Yedilisi tarot kartının üzerinde birçok nesne yer alır. Özellikle kupaların üzerinde yer alan insan sureti, defne çelengi ve kule en çok dikkat çeken objelerdendir. Kupa Yedilisi kartının üzerinde yer alan nesnelerin anlamı arzularımız, isteklerimiz ve seçtiğimiz seçeneklerin bize sunduğu ödüllerdir. Tarot danışmanları arasında bu kartın iki anlamı vardır. Bu anlamlardan birisi ne istediğini bilmeyen bir kişiyi temsil etmesi olurken, diğeri ise cazip seçenekler arasında kalan kararsız bir bireyin resmedilmesidir. Her iki anlamda da bu kartın kararsızlığı temsil ettiğini söylemek mümkündür. Bir algı yanılsamasındasınız ne istediğinizi tam anlamıyla bilmiyorsunuz. Bu nedenle manipüleye çok açık olabilirsiniz. Tarot kartları arasında birden çok anlam taşıyan kartlardan birisi olan bu kart, kişinin fiziksel uzaklaştığını ve hayaller aleminde kaybolduğunu temsil eder. Kişi, neyi istediğine karar verememekte ve ne yapacağını bilemez. Kartın anlamları arasında kişinin duygusal eksikliği de yer alır. Bu anlamda, kartı çeken kişi bir konuya odaklanmış değildir. Hangi yöne ilerlediğini bilemeyen kişi, duygusal olarak da kaybolmuş durumdadır. Fikirleri arasında kaybolan kişi, gerçekler dünyasından uzaklaşmış ve hayaller dünyasında kendisini bulmuştur. Kişiye gerçek dünyaya dönme çağrısında bulunur. Kısacası bir uyarı kartı gibidir.",
+            love: "Eğer Kupa Yedilisi kartını aşk konusunda çektiyseniz, bu kişinin aşk hayatında bir karmaşıklık olduğunu temsil eder. İlişki içerisinde yönünü kaybetmiş bir bireyi görürüz. Kişi, duygularından emin değildir. Kupa Yedilisi aşk anlamı olarak kişinin ilişkisinde sorunlar yaşayacağının da habercisi olabilir. Bu nedenle, kişi alacağı kararları iyi düşünmeli ve kafa karışıklığı yaşamamalıdır. Kupa Yedilisi aşk anlamı, kişinin ilişki hayatında bir takım sorunlar olduğunu gösterecektir.",
+            career: "Kariyer konusunda karşınıza çıkan Kupa Yedilisi, kariyer gelişimi için birçok olasılığın size açık olduğunu gösteren iyi bir alamettir. Tüm zamanınızı beyin fırtınası yaparak geçirmemeniz ve hayallerinizi gerçeğe dönüştürmek için pratik adımlar atmayı unutmamanız için de bir uyarı olabilir. Sonunu göremediğiniz şeylere kendinizi adamayın.",
+            money: "Para konusunda ise para kazanmak için birçok fırsatınız olmalı, ancak yatırım yapmadan önce dikkatli olmalısınız. Herhangi bir yatırım fırsatını baştan sona kontrol etmeli ve başlangıçta göründüğü kadar iyi bir anlaşma olmayabileceğinden, finansal konular hakkında deneyimli bir kişiye danışabilirsiniz.",
+            keywords: ["ALGI YANILSAMASI","BİRDEN FAZLA KONUYLA İLGİLENMEK","KAFA KARIŞIKLIĞI","OBJEKTİF BAKAMAMAK"]
+        },
+        reversed: {
+            general: "Kupa Yedilisi ters bir şekilde çıktığında kişinin gerçekleri görmezden geldiğine dair bir mesaj verir. Bu noktada, kişinin vereceği kararlar doğrultusunda hata yapma ihtimali oldukça yüksektir. Çünkü, kafa karışıklığı yaşamaktadır ve hangi yolu seçeceğine karar verememiştir. Bu kart bir uyarı kartı olarak görülmektedir. Bu nedenle, kişi çok hızlı bir şekilde düşünmeden kararlar vermemelidir.Aynı zamanda cazibe ve illüzyon kartı olarak da bilinen bu kartta, gerçekler yanlış bir şekilde algılanmaktadır. Kişi için oldukça cazip görünen teklifler aslında göründüğü gibi değildir. Kişinin içerisinde bulunduğu durum dışarıdan bakıldığı gibi değildir. Bu nedenle, bu kart dolandırıcılık ya da para tuzakları gibi olaylara karşı dikkatli olunmasını tavsiye eder.",
+            keywords: ["Gerçeklik","Az seçenek","Kararsızlık","Kaçırılmış fırsatlar","Materyalizm"]
+    }
+    },
+    {
+        name: 'Kupa Şövalyesi',
+        order: 212,
+        image: 'images/kupa_sovalyesi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
+        upright: {
+            general: "Genel bir tarot açılımında Kupa Şövalyesi anlamı hayatınızda hayalini kurduğunuz tekliflerin ve fırsatların şu dönemde olumlu bir şekilde size sunulacağını gösterir. Güzel haberler alabilirsiniz. Olumlu geri dönütler ve davetler moralinizi yükseltebilir. Hareketli ve duygusal bir zaman dilimi size iyi gelecek. Bu hareketli olaylara sizin de ayak uydurmanız için bu saraylı kartı size uzatılan fırsatları geri çevirmemenizi tavsiye eder. Aynı zamanda duygusal, nazik, romantik, heyecanlı, samimi, alttan alan, 20-40 yaş arası su burçlarının (Yengeç, Akrep, Balık) özelliklerindeki genç yetişkinleri temsil edebilir.",
+            love: "Aşk tarot açılımında karşınıza çıkan Kupa Şövalyesi'ni, kartın üzerindeki şövalyenin görünüşünden de anlayabileceğiniz gibi beyaz atlı prensiniz olarak görebilirsiniz. İlişkisi olmayanlar için aradıkları o romantik ve ayaklarını yerden kesecek kişinin artık çıkageldiğini gösterir. Hem de duygularını bağıra bağıra gelen bu Şövalye biraz beklenmedik bir anda gelebilir. Romantik teklifleri değerlendirmeniz yararınıza olacaktır.İlişkisi olan çiftler içinse yine romantik planlar, buluşmalar, sürprizler, hediyeler ve şımartmalar gündeminizde olabilir. İlişkinizde birbirinizin gözüne baktığınız, enerjik, coşkulu ve hayalperest hissettiğiniz bir dönemdesiniz. Partneriniz sizin üzerinize fazlasıyla titriyor ve çevrenize karşı sizin için fazla korumacı olduğunu gösteriyor.Eğer yakın zamanda tartışmalar olduysa bu kart uzlaşma ve orta yolu bulmak için atılan adımı da sembolize eder. Karşınızdaki kişi gönlünüzü almaya ve barışmaya çalışacaktır.",
+            career: "Bir kariyer tarot açılımında Kupa Şövalyesi tarot kartı iş hayatınızda henüz istediğiniz seviyeye yükselmediğinizi fakat ilk zamanlardaki çıraklık seviyesinde de olmadığınızı gösterir. İş/eğitim/kurs başvurusu veya zam artışı gibi beklentileriniz varsa olumlu sonuçlanabilir.Beklemediğiniz yerlerde iş teklifleri gelebilir. Bu saraylı kartı karşınıza çıkan fırsatları değerlendirmenizi tavsiye eder. İş yerinizde olumsuz bir hava varsa veya meslektaşlarınızla aranızda olumsuz enerjiler varsa çok yakın bir zamanda bu gergin hava dağılacak ve karşılıklı birbirinize ortaklık teklifi edeceksiniz.",
+            money: "Para açılımında Kupa Şövalyesi tarot kartı karşınızda yeni yatırım ve gelir fırsatları olacağını temsil eder. Maddi durumunuz şu anda sıkıntılıysa çok yakında çözüleceğini ve parasal anlamda yardım geleceğini de temsil edebilir. Yaratıcı ve yeni çözümler aramak maddi durumunuzu düzeltmenizde faydalı olacaktır.Kupa Şövalyesi Sağlık AnlamıSağlık tarot açılımında Kupa Şövalyesi tarot kartı pozitif anlamlar içerir. Günden güne daha çok iyileştiğinizi ve tedavilerin sonuç vermeye başladığını gösterir. Yeni bir tedaviye başlamayı düşünüyorsanız da bu sizin hayrınıza olacaktır. Beklediğiniz manevi desteği de şu anda alıyorsunuz veya almaya başlıyorsunuz. Duygusal anlamda da kendinizi daha iyi hissedeceksiniz.",
+            keywords: ["ROMANTİKLİK","DAVETİYE","FIRSATLAR","HAREKETLİLİK","KALBİNİN SESİNİ DİNLEMEK"]
+        },
+        reversed: {
+            general: "Kupa Şövalyesi tarot kartı açılımlarınızda ters belirdiği zaman fırsatların ters tepmesi, beklediğiniz olumlu haberlerin olumsuz sonuçlanması, tekliflerin ve davetlerin iptal olması anlamlarına gelir. Yaşadığınız hayal kırıklıkları düşünme yetinizi engellemiş olabilir. Bu saraylı tarot kartı düşünmeden anlık kararlar vermemenizi tavsiye eder.Bu kart aynı zamanda Kupa Şövalyesi'nin tam tersi karakterdeki bireyleri temsil eder. Kaba, sadakatsiz, sarkastik, dalga geçen, umursamaz, duygusuz bir karakter hayatınızda olabilir veya şu anda bu özellikleri taşıyor olabilirsiniz.",
+            keywords: ["Karşılıksız aşk","Kalp kırmak","Aldatmak","Hayal kırıklığı","Kötü haberler"]
+        }
+    },    
 ];
 
-tarotCards.sort((a, b) => a.name.localeCompare(b.name, 'tr'));
+tarotCards.sort((a, b) => a.order - b.order);
 
 
 // ==========================================================================
