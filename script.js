@@ -1392,79 +1392,42 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadStoryButton.addEventListener('click', () => {
         if (!currentCardData) return;
 
-        // Butonu anında devre dışı bırak ve metni değiştir
         downloadStoryButton.disabled = true;
         downloadStoryButton.textContent = "Görsel Hazırlanıyor...";
 
+        // Gerekli görselleri yükleyelim: Arka plan ve Kart Resmi
         const backgroundImage = new Image();
-        backgroundImage.crossOrigin = "Anonymous"; // Sunucuda çalışması için GEREKLİ
-        backgroundImage.src = 'images/story_arkaplan.jpg';
+        backgroundImage.crossOrigin = "Anonymous";
+        backgroundImage.src = 'images/story_arkaplan.jpg'; 
 
         backgroundImage.onload = () => {
-            // Arka plan yüklendikten SONRA kart resmini yüklemeye başla
             const cardImage = new Image();
-            cardImage.crossOrigin = "Anonymous"; // Sunucuda çalışması için GEREKLİ
+            cardImage.crossOrigin = "Anonymous";
             cardImage.src = currentCardData.image;
 
             cardImage.onload = () => {
-                // Her iki resim de başarıyla yüklendiğinde canvas'ı çiz
                 try {
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
                     canvas.width = 1080;
                     canvas.height = 1920;
 
-                    // Arka planı çiz
+                    // 1. Hazırladığımız arka plan resmini çiz
                     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-                    // Kart resmine parlak bir gölge ekle
+
+                    // 2. Kart resmine parlak bir gölge efekti ekle
                     ctx.shadowColor = 'rgba(255, 215, 0, 0.7)';
                     ctx.shadowBlur = 40;
-                    // Kart resmini çiz
+                    
+                    // 3. Kart resmini tam ortaya çiz
                     const aspectRatio = cardImage.height / cardImage.width;
-                    const cardWidth = 750;
+                    const cardWidth = 800; // Kartı daha büyük ve ortalanmış yapalım
                     const cardHeight = cardWidth * aspectRatio;
                     const cardX = (canvas.width - cardWidth) / 2;
-                    const cardY = 300;
+                    const cardY = (canvas.height - cardHeight) / 2; // Dikeyde de tam ortala
                     ctx.drawImage(cardImage, cardX, cardY, cardWidth, cardHeight);
-                    // Gölgeyi sıfırla
-                    ctx.shadowColor = 'transparent';
-                    ctx.shadowBlur = 0;
-                    // Kart Adını yaz
-                    ctx.font = "bold 80px Georgia";
-                    ctx.fillStyle = "#ffd700";
-                    ctx.textAlign = "center";
-                    ctx.fillText(currentCardData.name, canvas.width / 2, 220);
-                    // Metnin arkasına katman çiz
-                    const textBlockY = cardY + cardHeight + 80;
-                    ctx.fillStyle = 'rgba(15, 15, 35, 0.6)';
-                    ctx.fillRect(80, textBlockY, canvas.width - 160, 450);
-                    // Anlam metnini yaz
-                    const meaningText = currentCardData.upright.general || 'Anlam bulunamadı.';
-                    ctx.font = "italic 42px Georgia";
-                    ctx.fillStyle = "#f5f5f5";
-                    // Metni satırlara böl
-                    const words = meaningText.split(' ');
-                    let line = '';
-                    let y = textBlockY + 100;
-                    const lineHeight = 55;
-                    const maxWidth = canvas.width - 240;
-                    for (let n = 0; n < words.length; n++) {
-                        const testLine = line + words[n] + ' ';
-                        if (ctx.measureText(testLine).width > maxWidth && n > 0) {
-                            ctx.fillText(line.trim(), canvas.width / 2, y);
-                            line = words[n] + ' ';
-                            y += lineHeight;
-                        } else {
-                            line = testLine;
-                        }
-                    }
-                    ctx.fillText(line.trim(), canvas.width / 2, y);
-                    // Filigran
-                    ctx.font = "bold 36px Georgia";
-                    ctx.fillStyle = "rgba(255, 215, 0, 0.8)";
-                    ctx.fillText("Kozmik Kartlar", canvas.width / 2, canvas.height - 80);
-
-                    // İndirme işlemi
+                    
+                    // 4. İndirme işlemini başlat
                     const dataURL = canvas.toDataURL('image/png');
                     const a = document.createElement('a');
                     a.href = dataURL;
@@ -1484,14 +1447,14 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             
             cardImage.onerror = () => {
-                alert(`"${currentCardData.name}" kartının resmi ('${currentCardData.image}') yüklenemedi. Dosya yolunu kontrol edin.`);
+                alert(`"${currentCardData.name}" kartının resmi ('${currentCardData.image}') yüklenemedi.`);
                 downloadStoryButton.disabled = false;
                 downloadStoryButton.textContent = "Hikayeye Ekle ✨";
             };
         };
 
         backgroundImage.onerror = () => {
-            alert("Arka plan resmi ('images/story_arkaplan.jpg') yüklenemedi. Dosyanın doğru yerde olduğundan emin olun.");
+            alert("Arka plan resmi ('images/story_arkaplan.jpg') yüklenemedi.");
             downloadStoryButton.disabled = false;
             downloadStoryButton.textContent = "Hikayeye Ekle ✨";
         };
