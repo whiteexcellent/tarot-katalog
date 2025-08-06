@@ -1,7 +1,8 @@
-// ==========================================================================
-// BÖLÜM 1: KART VERİTABANI
-// ==========================================================================
+// script.js dosyasının tam içeriği
 
+// ============================
+// BÖLÜM 1: TAM KART VERİTABANI
+// ============================
 const tarotCards = [
     {
         name: 'Adalet',
@@ -1272,158 +1273,231 @@ const tarotCards = [
     },    
 ];
 
-tarotCards.sort((a, b) => a.order - b.order);
-
-
-// ==========================================================================
-// BÖLÜM 2: HTML ELEMENTLERİNİN SEÇİLMESİ
-// ==========================================================================
-const cardGrid = document.getElementById('card-grid');
-const searchInput = document.getElementById('searchInput');
-const modal = document.getElementById('cardModal');
-const modalContent = document.querySelector('.modal-content');
-const modalTitle = document.getElementById('modalTitle');
-const meaningsContainer = document.getElementById('meanings-container');
-const closeButton = document.querySelector('.close-button');
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-// ==========================================================================
-// BÖLÜM 3: ANA FONKSİYONLAR
-// ==========================================================================
-function displayCards(cards) {
-    cardGrid.innerHTML = '';
-    cards.forEach(card => {
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('card');
-        cardElement.innerHTML = `
-            <img src="${card.image}" alt="${card.name}">
-            <h3>${card.name}</h3>
-        `;
-        cardGrid.appendChild(cardElement);
-    });
-}
-
-function populateMeanings(cardData) {
-    meaningsContainer.innerHTML = '';
-    const meaningTitles = {
-        upright: "DÜZ ANLAMLARI",
-        reversed: "TERS ANLAMLARI",
-        general: "Genel Anlamı",
-        love: "Aşk Anlamı",
-        career: "Kariyer Anlamı",
-        money: "Para Anlamı",
-        careerAndMoney: "Kariyer ve Para Anlamı",
-        health: "Sağlık Anlamı",
-        keywords: "Anahtar Kelimeler"
-    };
-
-    ['upright', 'reversed'].forEach(type => {
-        if (cardData[type] && Object.keys(cardData[type]).length > 0) {
-            const mainTitle = document.createElement('h2');
-            mainTitle.className = 'section-title';
-            mainTitle.textContent = meaningTitles[type];
-            meaningsContainer.appendChild(mainTitle);
-
-            for (const category in cardData[type]) {
-                const content = cardData[type][category];
-                if (!content || content.length === 0 || !meaningTitles[category]) continue;
-
-                const subTitle = document.createElement('h3');
-                subTitle.className = 'meaning-title';
-                subTitle.textContent = meaningTitles[category];
-                meaningsContainer.appendChild(subTitle);
-
-                if (category === 'keywords' && Array.isArray(content)) {
-                    const listElement = document.createElement('ul');
-                    content.forEach(keyword => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = keyword;
-                        listElement.appendChild(listItem);
-                    });
-                    meaningsContainer.appendChild(listElement);
-                } else if (typeof content === 'string') {
-                    const paragraph = document.createElement('p');
-                    paragraph.innerHTML = content.replace(/\n/g, '<br>');
-                    meaningsContainer.appendChild(paragraph);
-                }
-            }
-        }
-    });
-}
-
-// ==========================================================================
-// BÖLÜM 4: EVENT LISTENERS
-// ==========================================================================
-
-// Sayfa yüklendiğinde kartları ve temayı ayarla
+// ============================
+// BÖLÜM 2: UYGULAMA MANTIĞI
+// ============================
 document.addEventListener('DOMContentLoaded', () => {
-    displayCards(tarotCards);
+    const cardsGrid = document.getElementById('cardsGrid');
+    const searchBox = document.getElementById('searchBox');
+    const filterButtonsContainer = document.getElementById('filterButtons');
+    const modal = document.getElementById('cardModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.querySelector('.modal-content');
+    const meaningsContainer = document.getElementById('meaningsContainer');
+    const closeButton = document.querySelector('.close-button');
+    const downloadStoryButton = document.getElementById('download-story-button');
 
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-theme');
-        themeToggle.innerHTML = '☀️';
-    } else {
-        themeToggle.innerHTML = '🌙';
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = 1080;  // Instagram Hikaye boyutu (Genişlik)
+    canvas.height = 1920; // Instagram Hikaye boyutu (Yükseklik)
+
+    let currentCardData = null;
+    let currentFilter = 'all';
+
+    function categorizeCards() {
+        tarotCards.forEach(card => {
+            if (card.order <= 21) card.category = 'major';
+            else if (card.order >= 101 && card.order <= 114) card.category = 'wands';
+            else if (card.order >= 201 && card.order <= 214) card.category = 'cups';
+            else if (card.order >= 301 && card.order <= 314) card.category = 'swords';
+            else if (card.order >= 401 && card.order <= 414) card.category = 'pentacles';
+        });
+        tarotCards.sort((a, b) => a.order - b.order);
     }
-});
 
-// Arama çubuğu
-searchInput.addEventListener('input', (e) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const filteredCards = tarotCards.filter(card => 
-        card.name.toLowerCase().includes(searchTerm)
-    );
-    displayCards(filteredCards);
-});
-
-// Kartlara tıklama
-cardGrid.addEventListener('click', (e) => {
-    const clickedCardElement = e.target.closest('.card');
-    if (clickedCardElement) {
-        const cardName = clickedCardElement.querySelector('h3').textContent;
-        const cardData = tarotCards.find(card => card.name === cardName);
-
-        modalTitle.textContent = cardData.name;
-        modalContent.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('${cardData.image}')`;
-        populateMeanings(cardData);
+    function renderCards() {
+        const searchTerm = searchBox.value.toLowerCase();
+        const filteredCards = tarotCards.filter(card => {
+            const matchesFilter = currentFilter === 'all' || card.category === currentFilter;
+            const matchesSearch = card.name.toLowerCase().includes(searchTerm);
+            return matchesFilter && matchesSearch;
+        });
         
+        cardsGrid.innerHTML = '';
+        filteredCards.forEach(card => {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'tarot-card';
+            cardElement.style.backgroundImage = `url('${card.image}')`;
+            cardElement.innerHTML = `<div class="card-name">${card.name}</div>`;
+            cardElement.addEventListener('click', () => showCardDetails(card));
+            cardsGrid.appendChild(cardElement);
+        });
+    }
+
+    function showCardDetails(cardData) {
+        currentCardData = cardData;
+        modalTitle.textContent = cardData.name;
+        modalContent.style.backgroundImage = `linear-gradient(rgba(26, 26, 58, 0.85), rgba(15, 15, 35, 0.95)), url('${cardData.image}')`;
+        populateMeanings(cardData);
         modal.style.display = 'flex';
     }
-});
 
-// Detay penceresini kapatma
-closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+    function populateMeanings(cardData) {
+        meaningsContainer.innerHTML = '';
+        const meaningTitles = {
+            upright: "DÜZ ANLAMLARI", reversed: "TERS ANLAMLARI", general: "Genel Anlamı",
+            love: "Aşk Anlamı", career: "Kariyer Anlamı", money: "Para Anlamı",
+            careerAndMoney: "Kariyer ve Para Anlamı", health: "Sağlık Anlamı", keywords: "Anahtar Kelimeler"
+        };
+        ['upright', 'reversed'].forEach(type => {
+            if (cardData[type] && Object.keys(cardData[type]).length > 0) {
+                const mainTitle = document.createElement('h2');
+                mainTitle.className = 'section-title';
+                mainTitle.textContent = meaningTitles[type];
+                meaningsContainer.appendChild(mainTitle);
 
-window.addEventListener('click', (e) => {
-    if (e.target == modal) {
-        modal.style.display = 'none';
+                for (const category in cardData[type]) {
+                    const content = cardData[type][category];
+                    if (!content || content.length === 0 || !meaningTitles[category]) continue;
+                    const subTitle = document.createElement('h3');
+                    subTitle.className = 'meaning-title';
+                    subTitle.textContent = meaningTitles[category];
+                    meaningsContainer.appendChild(subTitle);
+                    if (category === 'keywords' && Array.isArray(content)) {
+                        const listElement = document.createElement('ul');
+                        content.forEach(keyword => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = keyword;
+                            listElement.appendChild(listItem);
+                        });
+                        meaningsContainer.appendChild(listElement);
+                    } else if (typeof content === 'string') {
+                        const paragraph = document.createElement('p');
+                        paragraph.innerHTML = content.replace(/\n/g, '<br>');
+                        meaningsContainer.appendChild(paragraph);
+                    }
+                }
+            }
+        });
     }
-});
 
-// Tema Değiştirme
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-    if (body.classList.contains('dark-theme')) {
-        localStorage.setItem('theme', 'dark');
-        themeToggle.innerHTML = '☀️';
-    } else {
-        localStorage.removeItem('theme');
-        themeToggle.innerHTML = '🌙';
+    filterButtonsContainer.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON') {
+            document.querySelector('.filter-btn.active').classList.remove('active');
+            e.target.classList.add('active');
+            currentFilter = e.target.dataset.category;
+            renderCards();
+        }
+    });
+
+    searchBox.addEventListener('input', renderCards);
+    closeButton.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', (e) => {
+        if (e.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    downloadStoryButton.addEventListener('click', () => {
+        if (!currentCardData) return;
+
+        // 1. Butonu anında devre dışı bırak ve metni değiştir
+        downloadStoryButton.disabled = true;
+        downloadStoryButton.textContent = "Görsel Hazırlanıyor...";
+
+        const img = new Image();
+        img.crossOrigin = "Anonymous"; // Bu satır sunucuda çalışması için çok önemli
+
+        img.onload = () => {
+            try {
+                // Arka planı çiz
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = 1080;
+                canvas.height = 1920;
+                
+                ctx.fillStyle = '#1a1a3a';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Kart resmini çiz
+                const aspectRatio = img.height / img.width;
+                const cardWidth = 800;
+                const cardHeight = cardWidth * aspectRatio;
+                const cardX = (canvas.width - cardWidth) / 2;
+                const cardY = 200;
+                ctx.drawImage(img, cardX, cardY, cardWidth, cardHeight);
+
+                // Kart Adını yaz
+                ctx.font = "bold 72px Georgia";
+                ctx.fillStyle = "#ffd700";
+                ctx.textAlign = "center";
+                ctx.fillText(currentCardData.name, canvas.width / 2, 150);
+
+                // Anlam metnini yaz
+                const meaningText = currentCardData.upright.general || 'Anlam bulunamadı.';
+                ctx.font = "48px Georgia";
+                ctx.fillStyle = "#f5f5f5";
+                ctx.textAlign = "center";
+
+                // Metni otomatik olarak satırlara böl
+                const words = meaningText.split(' ');
+                let line = '';
+                let y = cardY + cardHeight + 120;
+                const lineHeight = 60;
+                const maxWidth = canvas.width - 160;
+                for (let n = 0; n < words.length; n++) {
+                    const testLine = line + words[n] + ' ';
+                    const testWidth = ctx.measureText(testLine).width;
+                    if (testWidth > maxWidth && n > 0) {
+                        ctx.fillText(line.trim(), canvas.width / 2, y);
+                        line = words[n] + ' ';
+                        y += lineHeight;
+                    } else {
+                        line = testLine;
+                    }
+                }
+                ctx.fillText(line.trim(), canvas.width / 2, y);
+
+                // 2. İndirme işlemini başlat
+                const dataURL = canvas.toDataURL('image/png');
+                const a = document.createElement('a');
+                a.href = dataURL;
+                a.download = `mistik_tarot_${currentCardData.name.toLowerCase().replace(/\s/g, '_')}.png`;
+                a.click();
+                
+                // 3. Başarı geri bildirimi ve butonu tekrar aktif etme
+                setTimeout(() => {
+                    downloadStoryButton.disabled = false;
+                    downloadStoryButton.textContent = "Hikayeye Ekle ✨";
+                    alert('Görsel indirildi! Şimdi Instagram Hikayenize ekleyebilirsiniz.');
+                }, 1000); // Kullanıcının indirmeyi fark etmesi için 1 saniye bekle
+
+            } catch (error) {
+                console.error("Canvas oluşturma hatası:", error);
+                alert("Görsel oluşturulurken bir hata oluştu.");
+                downloadStoryButton.disabled = false;
+                downloadStoryButton.textContent = "Hikayeye Ekle ✨";
+            }
+        };
+
+        img.onerror = () => {
+            alert("Üzgünüz, bu kartın görseli yüklenemedi. Sunucuya yüklendiğinden emin olun.");
+            downloadStoryButton.disabled = false;
+            downloadStoryButton.textContent = "Hikayeye Ekle ✨";
+        };
+
+        img.src = currentCardData.image;
+    });
+
+    function generateStars() {
+        const starsContainer = document.getElementById('stars');
+        if (!starsContainer) return;
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            const size = Math.random() * 2 + 1;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
     }
-});
 
-// --- Service Worker'ı Aktif Etme ---
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js')
-      .then(registration => {
-        console.log('Service Worker registered: ', registration);
-      })
-      .catch(registrationError => {
-        console.log('Service Worker registration failed: ', registrationError);
-      });
-  });
-}
+    // Başlangıç
+    categorizeCards();
+    generateStars();
+    renderCards();
+});
