@@ -1392,78 +1392,65 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadStoryButton.addEventListener('click', () => {
         if (!currentCardData) return;
 
+        // Butonu anında devre dışı bırak ve metni değiştir
         downloadStoryButton.disabled = true;
         downloadStoryButton.textContent = "Görsel Hazırlanıyor...";
 
-        // Gerekli görselleri yükleyelim: Arka plan ve Kart Resmi
         const backgroundImage = new Image();
-        backgroundImage.crossOrigin = "Anonymous";
-        backgroundImage.src = 'images/story_arkaplan.jpg'; // 1. Adımda oluşturduğumuz arka plan
+        backgroundImage.crossOrigin = "Anonymous"; // Sunucuda çalışması için GEREKLİ
+        backgroundImage.src = 'images/story_arkaplan.jpg';
 
         backgroundImage.onload = () => {
+            // Arka plan yüklendikten SONRA kart resmini yüklemeye başla
             const cardImage = new Image();
-            cardImage.crossOrigin = "Anonymous";
+            cardImage.crossOrigin = "Anonymous"; // Sunucuda çalışması için GEREKLİ
             cardImage.src = currentCardData.image;
 
             cardImage.onload = () => {
+                // Her iki resim de başarıyla yüklendiğinde canvas'ı çiz
                 try {
                     const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext('2d');
                     canvas.width = 1080;
                     canvas.height = 1920;
 
-                    // 1. Hazırladığımız arka plan resmini çiz
+                    // Arka planı çiz
                     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-
-                    // 2. Kart resmine parlak bir gölge efekti ekle
+                    // Kart resmine parlak bir gölge ekle
                     ctx.shadowColor = 'rgba(255, 215, 0, 0.7)';
                     ctx.shadowBlur = 40;
-                    
-                    // 3. Kart resmini çiz (daha estetik bir yerleşimle)
+                    // Kart resmini çiz
                     const aspectRatio = cardImage.height / cardImage.width;
-                    const cardWidth = 750; // Kartı biraz daha büyük yaptık
+                    const cardWidth = 750;
                     const cardHeight = cardWidth * aspectRatio;
                     const cardX = (canvas.width - cardWidth) / 2;
-                    const cardY = 300; // Kartı biraz aşağıya aldık
+                    const cardY = 300;
                     ctx.drawImage(cardImage, cardX, cardY, cardWidth, cardHeight);
-                    
-                    // Gölgeyi sıfırla ki metinleri etkilemesin
+                    // Gölgeyi sıfırla
                     ctx.shadowColor = 'transparent';
                     ctx.shadowBlur = 0;
-
-                    // 4. Kart Adını daha şık yaz
+                    // Kart Adını yaz
                     ctx.font = "bold 80px Georgia";
                     ctx.fillStyle = "#ffd700";
                     ctx.textAlign = "center";
-                    ctx.fillText(currentCardData.name, canvas.width / 2, 220); // Başlığı resmin üzerine taşıdık
-
-                    // 5. Metnin arkasına okunaklılık için yarı şeffaf bir katman çiz
+                    ctx.fillText(currentCardData.name, canvas.width / 2, 220);
+                    // Metnin arkasına katman çiz
                     const textBlockY = cardY + cardHeight + 80;
                     ctx.fillStyle = 'rgba(15, 15, 35, 0.6)';
-                    if (typeof ctx.roundRect === "function") {
-                        ctx.roundRect(80, textBlockY, canvas.width - 160, 450, 20); // Yuvarlak köşeli metin alanı
-                        ctx.fill();
-                    } else {
-                        // roundRect desteklenmiyorsa klasik rect kullan
-                        ctx.fillRect(80, textBlockY, canvas.width - 160, 450);
-                    }
-
-                    // 6. Anlam metnini yaz
+                    ctx.fillRect(80, textBlockY, canvas.width - 160, 450);
+                    // Anlam metnini yaz
                     const meaningText = currentCardData.upright.general || 'Anlam bulunamadı.';
                     ctx.font = "italic 42px Georgia";
                     ctx.fillStyle = "#f5f5f5";
-                    ctx.textAlign = "center";
-                    
-                    // Metni otomatik olarak satırlara böl
+                    // Metni satırlara böl
                     const words = meaningText.split(' ');
                     let line = '';
                     let y = textBlockY + 100;
                     const lineHeight = 55;
-                    const maxWidth = canvas.width - 240; // Alanı daha dar tuttuk
+                    const maxWidth = canvas.width - 240;
                     for (let n = 0; n < words.length; n++) {
                         const testLine = line + words[n] + ' ';
-                        const testWidth = ctx.measureText(testLine).width;
-                        if (testWidth > maxWidth && n > 0) {
+                        if (ctx.measureText(testLine).width > maxWidth && n > 0) {
                             ctx.fillText(line.trim(), canvas.width / 2, y);
                             line = words[n] + ' ';
                             y += lineHeight;
@@ -1472,45 +1459,39 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                     ctx.fillText(line.trim(), canvas.width / 2, y);
-
-                    // 7. Site adresini en alta filigran olarak ekle
+                    // Filigran
                     ctx.font = "bold 36px Georgia";
                     ctx.fillStyle = "rgba(255, 215, 0, 0.8)";
-                    ctx.fillText("Mistik Tarot", canvas.width / 2, canvas.height - 40);
+                    ctx.fillText("Kozmik Kartlar", canvas.width / 2, canvas.height - 80);
 
-                    // 2. İndirme işlemini başlat
+                    // İndirme işlemi
                     const dataURL = canvas.toDataURL('image/png');
                     const a = document.createElement('a');
                     a.href = dataURL;
-                    a.download = `mistik_tarot_${currentCardData.name.toLowerCase().replace(/\s/g, '_')}.png`;
+                    a.download = `kozmik_kartlar_${currentCardData.name.toLowerCase().replace(/\s/g, '_')}.png`;
                     a.click();
                     
-                    // 3. Başarı geri bildirimi ve butonu tekrar aktif etme
                     setTimeout(() => {
                         downloadStoryButton.disabled = false;
                         downloadStoryButton.textContent = "Hikayeye Ekle ✨";
-                        alert('Görsel indirildi! Şimdi Instagram Hikayenize ekleyebilirsiniz.');
-                    }, 1000); // Kullanıcının indirmeyi fark etmesi için 1 saniye bekle
+                    }, 1000);
 
                 } catch (error) {
-                    console.error("Canvas oluşturma hatası:", error);
                     alert("Görsel oluşturulurken bir hata oluştu.");
                     downloadStoryButton.disabled = false;
                     downloadStoryButton.textContent = "Hikayeye Ekle ✨";
                 }
             };
-
-            img.onerror = () => {
-                alert("Üzgünüz, bu kartın görseli yüklenemedi. Sunucuya yüklendiğinden emin olun.");
+            
+            cardImage.onerror = () => {
+                alert(`"${currentCardData.name}" kartının resmi ('${currentCardData.image}') yüklenemedi. Dosya yolunu kontrol edin.`);
                 downloadStoryButton.disabled = false;
                 downloadStoryButton.textContent = "Hikayeye Ekle ✨";
             };
-
-            img.src = currentCardData.image;
         };
 
-        cardImage.onerror = () => {
-            alert("Üzgünüz, bu kartın görseli yüklenemedi. Sunucuya yüklendiğinden emin olun.");
+        backgroundImage.onerror = () => {
+            alert("Arka plan resmi ('images/story_arkaplan.jpg') yüklenemedi. Dosyanın doğru yerde olduğundan emin olun.");
             downloadStoryButton.disabled = false;
             downloadStoryButton.textContent = "Hikayeye Ekle ✨";
         };
