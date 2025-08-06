@@ -1,210 +1,38 @@
-/* --- Genel Sayfa Stilleri --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* --- Başlık ve Arama Alanı Stilleri --- */
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    font-family: 'Lora', serif;
-    font-size: 1.5em; /* Mobil için daha uygun bir başlangıç boyutu */
-    margin: 0;
-    white-space: nowrap; /* Başlığın bölünmesini engelle */
-}
-
-.search-container {
-    flex-grow: 1;
-    padding: 0 15px;
-}
-
-#searchInput {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    font-size: 16px;
-    outline: none;
-}
-
-#theme-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-}
-
-/* --- Kartların Izgara (Grid) Düzeni --- */
-.card-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 25px;
-    padding: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- Tek Bir Kartın Stilleri --- */
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 15px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 280px; 
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    color: #2c3e50;
-    font-family: 'Lora', serif;
-    margin: 0;
-    font-size: 1.1em;
-}
-
-/* --- Modal (Detay Penceresi) Stilleri --- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-content {
-    background-color: #2c3e50;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 700px; 
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    color: white;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    max-height: 85vh;
-    overflow-y: auto;
-}
-
-.close-button {
-    color: #ddd;
-    font-size: 32px;
-    font-weight: bold;
-    position: sticky;
-    top: -15px;
-    right: -15px;
-    z-index: 10;
-    float: right;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.close-button:hover, .close-button:focus {
-    color: white;
-}
-
-.modal-content h2 {
-    text-align: center;
-    margin-top: 0;
-}
-
-.modal-content h3 {
-    color: #a5b4fc;
-    margin-top: 20px;
-    border-bottom: 1px solid #5e6d80;
-    padding-bottom: 5px;
-}
-
-.modal-content p, .modal-content ul {
-    line-height: 1.6;
-}
-
-.modal-content ul {
-    padding-left: 20px;
-}
-
-/* --- KARANLIK TEMA STİLLERİ --- */
-body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-theme header {
-    background-color: #1f2937;
-}
-
-body.dark-theme .card {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    border: 1px solid #333;
-}
-
-body.dark-theme .card h3 {
-    color: #a5b4fc;
-}
-
-body.dark-theme #searchInput {
-    background-color: #374151;
-    color: #f4f4f4;
-    border: 1px solid #4b5563;
-}
-
-body.dark-theme #searchInput::placeholder {
-    color: #9ca3af;
-}
-
-/* --- Mobil Cihazlar İçin Optimizasyon --- */
-@media (max-width: 680px) {
-    header h1 {
-        display: none;
-    }
-}
+/* style.css dosyasının tam içeriği */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d1b69 100%); color: #f5f5f5; min-height: 100vh; overflow-x: hidden; }
+.stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle 3s infinite ease-in-out; }
+@keyframes twinkle { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+.header { position: relative; z-index: 10; text-align: center; padding: 40px 20px; background: rgba(15, 15, 35, 0.7); backdrop-filter: blur(10px); }
+.logo { font-size: 2.5rem; font-weight: bold; background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+.tagline { font-size: 1.1rem; color: #b8b8d4; font-style: italic; }
+.main-content { position: relative; z-index: 10; padding: 20px; }
+.section { max-width: 1200px; margin: 0 auto 40px; }
+.section-title { text-align: center; font-size: 2.5rem; color: #ffd700; margin-bottom: 30px; position: relative; }
+.section-title::after { content: ''; display: block; width: 80px; height: 2px; background: linear-gradient(90deg, transparent, #ffd700, transparent); margin: 10px auto; }
+.search-container { max-width: 600px; margin: 0 auto 30px; position: relative; }
+.search-box { width: 100%; padding: 15px 20px; font-size: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 25px; color: #f5f5f5; backdrop-filter: blur(5px); transition: all 0.3s ease; }
+.search-box:focus { outline: none; border-color: #ffd700; background: rgba(255, 255, 255, 0.15); }
+.search-box::placeholder { color: #b8b8d4; }
+.search-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #ffd700; }
+.filter-buttons { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+.filter-btn { padding: 8px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 20px; color: #b8b8d4; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; }
+.filter-btn.active, .filter-btn:hover { background: rgba(255, 215, 0, 0.2); border-color: #ffd700; color: #ffd700; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
+.tarot-card { aspect-ratio: 0.7; background: linear-gradient(135deg, #1a1a3a, #2d1b69); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden; background-size: cover; background-position: center; }
+.tarot-card:hover { transform: translateY(-10px) scale(1.05); border-color: #ffd700; box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3); }
+.card-name { font-size: 1rem; font-weight: bold; color: white; position: relative; z-index: 2; background: rgba(0, 0, 0, 0.6); width: 100%; padding: 5px 0; border-radius: 0 0 8px 8px; text-shadow: 1px 1px 2px black; }
+.footer { text-align: center; padding: 30px 20px; background: rgba(15, 15, 35, 0.9); margin-top: 60px; }
+.footer-content { color: #b8b8d4; font-size: 0.9rem; }
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; }
+.modal-content { background-color: #1a1a3a; margin: auto; padding: 30px; border-radius: 15px; border: 1px solid rgba(255, 215, 0, 0.3); width: 90%; max-width: 700px; position: relative; box-shadow: 0 5px 25px rgba(0,0,0,0.5); color: #f5f5f5; background-size: cover; background-position: center; background-repeat: no-repeat; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); max-height: 85vh; overflow-y: auto; }
+.close-button { color: #ddd; font-size: 32px; font-weight: bold; position: sticky; top: -15px; right: -15px; z-index: 10; float: right; cursor: pointer; transition: color 0.2s; }
+.close-button:hover, .close-button:focus { color: white; }
+.modal-content h2.section-title { font-size: 2.2rem; color: #ffd700; text-align: center; margin-top: 0; }
+.modal-content h3.meaning-title { color: #ffd700; margin-top: 25px; border-bottom: 1px solid rgba(255, 215, 0, 0.3); padding-bottom: 8px; font-size: 1.4rem; }
+.modal-content p, .modal-content ul { line-height: 1.7; color: #b8b8d4; }
+.modal-content ul { list-style-type: '✨'; padding-left: 25px; } .modal-content ul li { padding-left: 10px; margin-bottom: 5px; }
+#download-story-button { display: block; width: 80%; max-width: 300px; margin: 30px auto 10px; padding: 12px 20px; font-family: 'Lora', serif; font-size: 1.1rem; font-weight: bold; color: #1a1a3a; background: linear-gradient(45deg, #ffd700, #ffed4e); border: none; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2); }
+#download-story-button:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); }
+@media (max-width: 768px) { .logo { font-size: 2rem; } .cards-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; } .modal-content { padding: 20px; } .modal-content h2.section-title { font-size: 1.8rem; } .modal-content h3.meaning-title { font-size: 1.2rem; } }
