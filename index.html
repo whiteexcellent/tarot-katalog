@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarot Kart Kataloğu</title>
+    <title>Mistik Tarot - Türkçe Tarot Kartları</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-
-    <header>
-        <h1>Tarot Kart Kataloğu</h1>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Kart ara...">
-        </div>
-        <button id="theme-toggle"></button>
+    <div class="stars" id="stars"></div>
+    <header class="header">
+        <h1 class="logo">✨ Mistik Tarot ✨</h1>
+        <p class="tagline">Kaderinizi Keşfedin • Gelecekte Yolunuzu Bulun</p>
     </header>
-
-    <main id="card-grid" class="card-grid-container"></main>
+    <main class="main-content">
+        <section class="section">
+            <h2 class="section-title">Tarot Kartları Koleksiyonu</h2>
+            <div class="search-container">
+                <input type="text" class="search-box" id="searchBox" placeholder="Kart adını arayın...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-category="all">Tümü</button>
+                <button class="filter-btn" data-category="major">Ana Arkana</button>
+                <button class="filter-btn" data-category="wands">Değnekler</button>
+                <button class="filter-btn" data-category="cups">Kupalar</button>
+                <button class="filter-btn" data-category="swords">Kılıçlar</button>
+                <button class="filter-btn" data-category="pentacles">Tılsımlar</button>
+            </div>
+            <div class="cards-grid" id="cardsGrid">
+                </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Mistik Tarot • Ruhani Rehberlik ve İç Görü Platformu</p>
+        </div>
+    </footer>
 
     <div id="cardModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <div id="meanings-container">
-                </div>
+            <h2 id="modalTitle" class="section-title"></h2>
+            <div id="meaningsContainer"></div>
+            <button id="download-story-button">Hikayeye Ekle ✨</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
