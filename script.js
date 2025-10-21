@@ -1013,6 +1013,7 @@ const tarotCards = [
     },
     {
         name: 'Tılsım İkilisi',
+        order: 402,
         image: 'images/tılsımikilisi.jpg', // Lütfen bu görselin yolu doğru olduğundan emin olun
         upright: {
             general: "Tılsım İkilisi kartı, hayatınızın çeşitli alanları arasındaki dengeyi bulmaya veya korumaya çalıştığınızı gösterebilir. Bir kısır döngüye saplanılmış ve alışkanlıklardan vazgeçilemiyor olabilir. Kartın üzerinde görünen sonsuzluk işareti sonsuz döngüyü kıramamayı bu nedenle de monotonlaşan süreci gösterir. Hayatın iniş çıkışlarını temsil eder ve aslında becerikli, uyum sağlayabilen ve bunların üstesinden gelebilecek kadar esnek olduğunuzu gösterir. Ancak, aynı anda çok fazla şeyle uğraşmaya çalışmanın ve önemli olana öncelik vermemenin başarısızlığa ve yorgunluğa yol açabileceğinin de uyarısını verir. Tılsım İkilisi anlamı aynı zamanda iki durum arasında kaldığınızı ve karar veremediğiniz için aksiyon almadığınızı da sembolize eder.",
@@ -1480,4 +1481,19 @@ document.addEventListener('DOMContentLoaded', () => {
     categorizeCards();
     generateStars();
     renderCards();
+
+    // Tarayıcı konsolunda, sayfa yüklendikten sonra çalıştırın
+    const missing = tarotCards.filter(c => typeof c.order === 'undefined' || c.order === null);
+    if (missing.length) {
+      console.log('Order değeri eksik kartlar:', missing.map(c => c.name || c.image || c));
+    } else {
+      console.log('Tüm kartlarda order değeri mevcut.');
+    }
+    // Ayrıca sayı olmayan veya duplicate order kontrolü:
+    const nonNumber = tarotCards.filter(c => typeof c.order !== 'number');
+    if (nonNumber.length) console.log('Order sayısı olmayan/number olmayanlar:', nonNumber.map(c=>c.name));
+    const counts = {};
+    tarotCards.forEach(c=>counts[c.order]=(counts[c.order]||0)+1);
+    const duplicates = Object.entries(counts).filter(([k,v])=>v>1).map(([k])=>k);
+    if (duplicates.length) console.log('Tekrarlanan order değerleri:', duplicates);
 });
