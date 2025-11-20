@@ -1,38 +1,313 @@
-/* style.css dosyasının tam içeriği */
+/* Genel Ayarlar ve Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d1b69 100%); color: #f5f5f5; min-height: 100vh; overflow-x: hidden; }
+
+body { 
+    font-family: 'Georgia', serif; 
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d1b69 100%); 
+    color: #f5f5f5; 
+    min-height: 100vh; 
+    overflow-x: hidden; 
+}
+
+/* Arka Plan Yıldız Efektleri */
 .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
 .star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle 3s infinite ease-in-out; }
 @keyframes twinkle { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+
+/* Başlık Alanı */
 .header { position: relative; z-index: 10; text-align: center; padding: 40px 20px; background: rgba(15, 15, 35, 0.7); backdrop-filter: blur(10px); }
-.logo { font-size: 2.5rem; font-weight: bold; background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+
+.logo { 
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    margin-bottom: 10px; 
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); 
+}
+
 .tagline { font-size: 1.1rem; color: #b8b8d4; font-style: italic; }
+
+/* Ana İçerik Alanı */
 .main-content { position: relative; z-index: 10; padding: 20px; }
 .section { max-width: 1200px; margin: 0 auto 40px; }
-.section-title { text-align: center; font-size: 2.5rem; color: #ffd700; margin-bottom: 30px; position: relative; }
-.section-title::after { content: ''; display: block; width: 80px; height: 2px; background: linear-gradient(90deg, transparent, #ffd700, transparent); margin: 10px auto; }
+
+.section-title { 
+    text-align: center; 
+    font-size: 2.5rem; 
+    color: #ffd700; 
+    margin-bottom: 30px; 
+    position: relative; 
+}
+
+.section-title::after { 
+    content: ''; 
+    display: block; 
+    width: 80px; 
+    height: 2px; 
+    background: linear-gradient(90deg, transparent, #ffd700, transparent); 
+    margin: 10px auto; 
+}
+
+/* Arama Kutusu (YENİLENDİ) */
 .search-container { max-width: 600px; margin: 0 auto 30px; position: relative; }
-.search-box { width: 100%; padding: 15px 20px; font-size: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 25px; color: #f5f5f5; backdrop-filter: blur(5px); transition: all 0.3s ease; }
-.search-box:focus { outline: none; border-color: #ffd700; background: rgba(255, 255, 255, 0.15); }
+
+.search-box { 
+    width: 100%; 
+    padding: 15px 20px 15px 50px; /* İkon için soldan boşluk */
+    font-size: 1rem; 
+    background: rgba(20, 20, 40, 0.6); 
+    border: 1px solid rgba(255, 215, 0, 0.3); 
+    border-radius: 50px; 
+    color: #fff; 
+    backdrop-filter: blur(5px); 
+    transition: all 0.3s ease; 
+}
+
+.search-box:focus { 
+    outline: none; 
+    border-color: #ffd700; 
+    background: rgba(20, 20, 40, 0.8); 
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1); 
+}
+
 .search-box::placeholder { color: #b8b8d4; }
-.search-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #ffd700; }
-.filter-buttons { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
-.filter-btn { padding: 8px 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 20px; color: #b8b8d4; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; }
-.filter-btn.active, .filter-btn:hover { background: rgba(255, 215, 0, 0.2); border-color: #ffd700; color: #ffd700; }
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
-.tarot-card { aspect-ratio: 0.7; background: linear-gradient(135deg, #1a1a3a, #2d1b69); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; transition: all 0.4s ease; cursor: pointer; position: relative; overflow: hidden; background-size: cover; background-position: center; }
-.tarot-card:hover { transform: translateY(-10px) scale(1.05); border-color: #ffd700; box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3); }
-.card-name { font-size: 1rem; font-weight: bold; color: white; position: relative; z-index: 2; background: rgba(0, 0, 0, 0.6); width: 100%; padding: 5px 0; border-radius: 0 0 8px 8px; text-shadow: 1px 1px 2px black; }
-.footer { text-align: center; padding: 30px 20px; background: rgba(15, 15, 35, 0.9); margin-top: 60px; }
+
+.search-icon { 
+    position: absolute; 
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #ffd700; 
+    pointer-events: none;
+}
+
+/* Filtre Butonları (YENİLENDİ) */
+.filter-buttons { 
+    display: flex; 
+    justify-content: center; 
+    gap: 12px; 
+    margin-bottom: 30px; 
+    flex-wrap: wrap; 
+}
+
+.filter-btn { 
+    padding: 8px 24px; 
+    background: transparent; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 20px; 
+    color: rgba(255, 255, 255, 0.7); 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    font-size: 0.9rem; 
+    white-space: nowrap;
+}
+
+.filter-btn.active, .filter-btn:hover { 
+    background: linear-gradient(45deg, #ffd700, #b8860b); 
+    border-color: transparent; 
+    color: #000; 
+    font-weight: bold; 
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); 
+}
+
+/* Kart Izgarası */
+.cards-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 20px; 
+}
+
+/* Tarot Kartı (YENİLENDİ - Cam Efekti ve Animasyon) */
+.tarot-card { 
+    aspect-ratio: 0.7; 
+    background-color: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-end; 
+    text-align: center; 
+    transition: all 0.4s ease; 
+    cursor: pointer; 
+    position: relative; 
+    overflow: hidden; 
+    background-size: cover; 
+    background-position: center; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+    
+    /* Başlangıç animasyonu */
+    opacity: 0; 
+    animation: fadeInMove 0.6s ease forwards; 
+}
+
+.tarot-card:hover { 
+    transform: translateY(-10px) scale(1.05); 
+    border-color: rgba(255, 215, 0, 0.6); 
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2); 
+}
+
+.card-name { 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    color: white; 
+    position: relative; 
+    z-index: 2; 
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); 
+    width: 100%; 
+    padding-top: 30px; 
+    padding-bottom: 15px; 
+    border-radius: 0 0 15px 15px; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
+/* Animasyon Gecikmeleri (Sırayla gelmeleri için) */
+.tarot-card:nth-child(1) { animation-delay: 0.1s; }
+.tarot-card:nth-child(2) { animation-delay: 0.15s; }
+.tarot-card:nth-child(3) { animation-delay: 0.2s; }
+.tarot-card:nth-child(4) { animation-delay: 0.25s; }
+.tarot-card:nth-child(5) { animation-delay: 0.3s; }
+.tarot-card:nth-child(6) { animation-delay: 0.35s; }
+
+/* Footer */
+.footer { 
+    text-align: center; 
+    padding: 30px 20px; 
+    background: rgba(15, 15, 35, 0.9); 
+    margin-top: 60px; 
+}
 .footer-content { color: #b8b8d4; font-size: 0.9rem; }
-.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; }
-.modal-content { background-color: #1a1a3a; margin: auto; padding: 30px; border-radius: 15px; border: 1px solid rgba(255, 215, 0, 0.3); width: 90%; max-width: 700px; position: relative; box-shadow: 0 5px 25px rgba(0,0,0,0.5); color: #f5f5f5; background-size: cover; background-position: center; background-repeat: no-repeat; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); max-height: 85vh; overflow-y: auto; }
-.close-button { color: #ddd; font-size: 32px; font-weight: bold; position: sticky; top: -15px; right: -15px; z-index: 10; float: right; cursor: pointer; transition: color 0.2s; }
-.close-button:hover, .close-button:focus { color: white; }
-.modal-content h2.section-title { font-size: 2.2rem; color: #ffd700; text-align: center; margin-top: 0; }
-.modal-content h3.meaning-title { color: #ffd700; margin-top: 25px; border-bottom: 1px solid rgba(255, 215, 0, 0.3); padding-bottom: 8px; font-size: 1.4rem; }
-.modal-content p, .modal-content ul { line-height: 1.7; color: #b8b8d4; }
-.modal-content ul { list-style-type: '✨'; padding-left: 25px; } .modal-content ul li { padding-left: 10px; margin-bottom: 5px; }
-#download-story-button { display: block; width: 80%; max-width: 300px; margin: 30px auto 10px; padding: 12px 20px; font-family: 'Lora', serif; font-size: 1.1rem; font-weight: bold; color: #1a1a3a; background: linear-gradient(45deg, #ffd700, #ffed4e); border: none; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2); }
-#download-story-button:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); }
-@media (max-width: 768px) { .logo { font-size: 2rem; } .cards-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; } .modal-content { padding: 20px; } .modal-content h2.section-title { font-size: 1.8rem; } .modal-content h3.meaning-title { font-size: 1.2rem; } }
+
+/* Modal (Pencere) Arka Planı */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); /* Daha koyu arka plan */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Modal İçeriği (YENİLENDİ) */
+.modal-content { 
+    background-color: #1a1a2e; /* Düz lacivert, okuması kolay */
+    margin: auto; 
+    padding: 40px; 
+    border-radius: 15px; 
+    border: 1px solid #ffd700; 
+    width: 90%; 
+    max-width: 600px; 
+    position: relative; 
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.15); 
+    color: #f5f5f5; 
+    max-height: 85vh; 
+    overflow-y: auto; 
+}
+
+.close-button { 
+    color: #ddd; 
+    font-size: 32px; 
+    font-weight: bold; 
+    position: absolute; 
+    top: 15px; 
+    right: 20px; 
+    z-index: 10; 
+    cursor: pointer; 
+    transition: color 0.2s; 
+}
+
+.close-button:hover, .close-button:focus { color: #ffd700; }
+
+/* Modal Yazı Stilleri */
+.modal-content h2.section-title { 
+    font-size: 2rem; 
+    color: #ffd700; 
+    text-align: center; 
+    margin-top: 0; 
+    border-bottom: 2px solid #ffd700; 
+    padding-bottom: 10px; 
+    display: inline-block; 
+    width: 100%;
+}
+
+.modal-content h3.meaning-title { 
+    color: #b8860b; 
+    margin-top: 25px; 
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    border-bottom: none;
+}
+
+.modal-content p, .modal-content ul { 
+    line-height: 1.6; 
+    color: #e0e0e0; 
+    font-size: 1.05rem; 
+}
+
+.modal-content ul { list-style-type: '✨'; padding-left: 25px; } 
+.modal-content ul li { padding-left: 10px; margin-bottom: 8px; }
+
+/* Hikaye İndir Butonu */
+#download-story-button { 
+    display: block; 
+    width: 80%; 
+    max-width: 300px; 
+    margin: 30px auto 10px; 
+    padding: 12px 20px; 
+    font-family: 'Georgia', serif; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    color: #1a1a3a; 
+    background: linear-gradient(45deg, #ffd700, #ffed4e); 
+    border: none; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2); 
+}
+
+#download-story-button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); 
+}
+
+/* Kart Giriş Animasyonu Keyframes */
+@keyframes fadeInMove {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobil Düzenlemeler */
+@media (max-width: 768px) { 
+    .logo { font-size: 2rem; } 
+    .cards-grid { 
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+        gap: 15px; 
+    } 
+    .modal-content { padding: 25px 20px; } 
+    
+    /* Filtre butonları mobilde yana kaydırılabilir */
+    .filter-buttons { 
+        justify-content: flex-start; 
+        overflow-x: auto; 
+        padding-bottom: 10px; 
+        padding-left: 5px;
+    }
+    /* Kaydırma çubuğunu gizle */
+    .filter-buttons::-webkit-scrollbar { display: none; }
+    
+    .search-box { font-size: 16px; /* iPhone'da zoom yapmayı engeller */ }
+}
